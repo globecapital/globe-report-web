@@ -3,6 +3,7 @@ node_modules/
 .sass-cache/
 source/
 gulp-env/
+zip/globe-report-web-source-V1.0.0/
 
 **/*.log
 public/**/images/*
