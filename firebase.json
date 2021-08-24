@@ -1,0 +1,16 @@
+{
+	"database": {
+		"rules": "n"
+	},
+	"hosting": {
+		"site": "globe-reports",
+		"public": "globe-report-web",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"rewrites": [
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
+	}
+}
