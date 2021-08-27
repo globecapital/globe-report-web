@@ -1,7 +1,7 @@
 # Node gitignore -----
 node_modules/
 .sass-cache/
-# source/
+source/
 gulp-env/
 zip/globe-report-web-source-V1.0.0/
 
