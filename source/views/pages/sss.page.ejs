@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header-meta.ejs') %>
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+    <div class="pages">
+        <div class="container">
+            <div class="section-header">
+                <h3 class="header">
+                    <span class="text-heading">Ledger Report</span>
+                    <!-- <div class="btn-header">
+                        <ul class="btn-header-link">
+                            <li class=""><a href="#"><span class="fa fa-download icons"></span> <span
+                                        class="text">Download</span></a></li>
+                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                                        class="text">Email</span></a></li>
+                        </ul>
+                    </div> -->
+                </h3>
+            </div>
+        </div>
+        <%- include('../partials/ledger-report.ejs') %>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+    <script type="text/javascript">
+        $('.switch-label').each(function () {
+            var $toggle = $(this);
+            var originalText = $toggle.find('.text').text();
+            var secondaryText = $toggle.data('toggle-text');
+            var $target = $($toggle.find('input[type="checkbox"]'));
+            // 
+            $target.on('change', function () {
+                if ($toggle.find('.text').text() == originalText) {
+                    $toggle.find('.text').text(secondaryText);
+                    $toggle.find('.lever').addClass('active');
+                } else {
+                    $toggle.find('.text').text(originalText);
+                    $toggle.find('.lever').removeClass('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

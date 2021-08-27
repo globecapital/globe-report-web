@@ -1,0 +1,25 @@
+//
+// card
+// --------------------------------------------------
+.jubbo-block {
+	padding-top: $padding-button-horizontal * 4;
+	.info-img {
+		display: block;
+		img {
+			display: block;
+			width: $padding-base-horizontal * 4;
+			margin: 0 auto;
+		}
+	}
+
+	h5.header {
+    color: $gray-light; 
+	}
+
+	.categories-btns {
+    padding-top: $padding-button-horizontal * 2;
+		.btn {
+			
+		}
+	}
+}

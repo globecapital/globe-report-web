@@ -1,0 +1,153 @@
+<footer class="page-footer">
+  <div class="footer-copyright">
+    <div class="container-fluid clearfix">
+      <div class="text-copyright text-center">
+        Copyright &copy; 2020 <a href="" rel="nofollow">Globe Capital Pvt Ltd.</a> <span class="sep"> All
+          Rights
+          Reserved</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+  var muynewtable = $('#holdingstable').DataTable({
+    sDom: "t<'text-center table-bottom'l p>",
+    searching: true,
+    info: false,
+    bFilter: true,
+    destroy: true,
+    sPaginationType: 'bootstrap',
+    responsive: true,
+    processing: true,
+    // serverSide:true,
+    columnDefs: [{
+      //"targets":[0, 3], //first and last not sortable
+      // "orderable":false,
+    }, ],
+  });
+
+  $('.search-input').on('keyup change input', function (e) {
+    let search = $(this)
+    let searchColumns = search.data('columns');
+    e.preventDefault();
+    console.log(searchColumns);
+    muynewtable.columns(searchColumns - 1).search(this.value).draw();
+  });
+
+  $(".export-excel").on("click", function (e) {
+    e.preventDefault();
+    var exportTable = $(this).data("table");
+    console.log(exportTable);
+  });
+
+  // $.extend(true, $.fn.dataTable.defaults, {
+  //     sDom: "i",
+  //     sPaginationType: 'bootstrap',
+  // });
+
+  $('.switch-label').each(function () {
+    var $toggle = $(this);
+    var originalText = $toggle.find('.text').text();
+    var secondaryText = $toggle.data('toggle-text');
+    var $target = $($toggle.find('input[type="checkbox"]'));
+    // 
+    $target.on('change', function () {
+      if ($toggle.find('.text').text() == originalText) {
+        $toggle.find('.text').text(secondaryText);
+        $toggle.find('.lever').addClass('active');
+      } else {
+        $toggle.find('.text').text(originalText);
+        $toggle.find('.lever').removeClass('active');
+      }
+    });
+  });
+  $(window).on('load resize', function () {
+    // var windowsWidth = $(window).width();
+    var windowsHeight = $(window).height();
+    var navbarHeight = $('.siteNavbar').outerHeight();
+    var footerHeight = $('.page-footer').outerHeight();
+
+    // console.log(windowsHeight, navbarHeight, footerHeight);
+
+    $('.pages').css({
+      minHeight: windowsHeight - (navbarHeight + footerHeight),
+    });
+  });
+
+  $('#viewTradesPop').on('show.bs.modal', function (event) {
+    var windowsHight = $(window).height();
+    var button = $(event.relatedTarget); // Button that triggered the modal
+    var recipient = button.data('target-content'); // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    // $(".welcome-panel").css("min-height", (windowsHight - (footerHeight * 2.10)));
+    var modal = $(this);
+    var recipientData = $(recipient).find('.preparation-contant');
+    var heading = recipientData.find('.symbol').text();
+    var isin = recipientData.find('.isin').text();
+    var totalQty = recipientData.find('.total-qty').text();
+    var price = recipientData.find('.price').text();
+    var prvClose = recipientData.find('.prv-close').text();
+    var dataDate = recipientData.find('.date').text();
+    var ageDays = recipientData.find('.age-days').text();
+    var profitLoss = recipientData.find('.profit-loss').html();
+    // var popPackInfo = $(recipient).find('.pricing-section').html();
+    console.log(heading);
+
+    modal.find('.symbols-modal-contant').css("minHeight", modal.height() / 4);
+    modal.find('.pop-heading').html(heading);
+
+    var dataHead = modal.find('.head-content');
+    var dataBody = modal.find('.pricing-section');
+
+    dataHead.html(
+      '<h3 class="pop-heading text-uppercase">' + heading + '</h3>' +
+      // '<div class="pop-content"></div>' +
+      '<div class="heading-list">' +
+      '<ul class="header-link">' +
+      '<li><span class="isin text-uppercase"><span class="text">isin : </span><span class="text-abt">' + isin +
+      '</span></span></li>' +
+      '<li><span class="total-qty"> <span class="text">Total Qty : </span><span class="text-abt">' + totalQty +
+      '</span></span></li>' +
+      '<li><span class="prv-close"> <span class="text">Prv close : </span><span class="text-abt">' + prvClose +
+      '</span></span></li>' +
+      '</ul>' +
+      '</div>'
+    );
+
+    dataBody.html(
+      `<table class="table table-symbols-pop">
+        <thead>
+            <tr>
+                <th width="30%" class="with-icon">Date</th>
+                <th class="with-icon text-center">QTY</th>
+                <th class="with-icon text-right">Price</th>
+                <th class="with-icon text-right">Age (days)</th>
+                <th class="with-icon text-right">P&L</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="date">${dataDate}</span></td>
+                <td class="text-center"><span class="total-qty">${totalQty}</span></td>
+                <td class="text-right"><span class="price">${price}</span></td>
+                <td class="text-right"><span class="age-days">${ageDays}</span></td>
+                <td class="text-right"><span class="profit-loss">${profitLoss}</span></td>
+            </tr>
+        </tbody>
+    </table>`
+    );
+  });
+  $('#viewTradesPop').on('hidden.bs.modal', function (e) {
+    $('.head-content').html('');
+    $('.pricing-section').html('');
+  });
+
+  $('.modal').on('show.bs.modal', function (e) {
+    var modal = $(this);
+    var windowsHeight = $(window).height();
+    modal.find('.modal-dialog').css({
+      paddingTop: (modal.height() / 4),
+    });
+  });
+</script>

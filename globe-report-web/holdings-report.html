@@ -66,9 +66,10 @@
           <ul class="dropdown-menu">
             <li><a href="index.html">Ledger Report</a></li>
             <li><a href="holdings-report.html">Holdings Report</a></li>
-            <li><a href="mtf-holdings-report.html">MTF Holding</a></li>
+            <!-- <li><a href="mtf-holdings-report.html">MTF Holding</a></li> -->
             <li><a href="profit-and-loss.html">P&L Report</a></li>
             <li><a href="transaction-roport.html">Transaction Report</a></li>
+            <li><a href="download-roport.html">Download Report</a></li>
           </ul>
         </li>
         <!-- <li class="icons-text"><a href="#"><span class="fa fa-search icons"></span></a></li> -->
@@ -148,9 +149,11 @@
         <div class="btn-header">
             <ul class="btn-header-link">
                 <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
-                            class="fa fa-download icons"></span> <span class="text">Download</span></a></li>
-                <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
-                            class="text">Email</span></a></li>
+                            class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
+                            class="text">PDF</span></a></li>
+                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                                class="text">Email</span></a></li>
             </ul>
         </div>
         
@@ -158,14 +161,17 @@
             <table id="holdingstable" class="table  table-symbols text-right" data-sortable="true" width="100%">
                 <thead>
                     <tr>
-                        <th width="30%" class="with-icon">Symbol</th>
+                        <th width="20%" class="with-icon">Symbol</th>
                         <th class="with-icon text-right">QTY</th>
-                        <th class="with-icon text-right">Buy Avg</th>
-                        <th class="with-icon text-right">Buy Value</th>
-                        <th class="with-icon text-right">Prev Close</th>
-                        <th class="with-icon text-right">Market Val</th>
+                        <th class="with-icon text-right">NRML&nbsp;QTY</th>
+                        <th class="with-icon text-right">MTF&nbsp;QTY</th>
+                        <th class="with-icon text-right">Total&nbsp;QTY</th>
+                        <th class="with-icon text-right">Buy&nbsp;Avg</th>
+                        <th class="with-icon text-right">Buy&nbsp;Value</th>
+                        <th class="with-icon text-right">Prev&nbsp;Close</th>
+                        <th class="with-icon text-right">Market&nbsp;Val</th>
                         <th class="with-icon text-right">P&L</th>
-                        <th class="with-icon text-right">P&L Chg</th>
+                        <th class="with-icon text-right">P&L&nbsp;Chg</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -182,6 +188,9 @@
                         <td>10000 <small class="text-lock">6500 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>331.79</td>
+                        <td>331.79</td>
+                        <td>331.79</td>
                         <td>331.79</td>
                         <td>631.79</td>
                         <td>130</td>
@@ -240,6 +249,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>431.79</td>
+                        <td>431.79</td>
+                        <td>431.79</td>
+                        <td>431.79</td>
                         <td>731.79</td>
                         <td>140</td>
                         <td>400</td>
@@ -296,6 +308,9 @@
                         <td>10006 <small class="text-lock">6700 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>531.79</td>
+                        <td>531.79</td>
+                        <td>531.79</td>
                         <td>531.79</td>
                         <td>831.79</td>
                         <td>150</td>
@@ -354,6 +369,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>631.79</td>
+                        <td>631.79</td>
+                        <td>631.79</td>
+                        <td>631.79</td>
                         <td>931.79</td>
                         <td>160</td>
                         <td>600</td>
@@ -410,6 +428,9 @@
                         <td>100012 <small class="text-lock">6900 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>731.79</td>
+                        <td>731.79</td>
+                        <td>731.79</td>
                         <td>731.79</td>
                         <td>1031.79</td>
                         <td>170</td>
@@ -468,6 +489,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>831.79</td>
+                        <td>831.79</td>
+                        <td>831.79</td>
+                        <td>831.79</td>
                         <td>1131.79</td>
                         <td>180</td>
                         <td>800</td>
@@ -524,6 +548,9 @@
                         <td>100018 <small class="text-lock">7100 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>931.79</td>
+                        <td>931.79</td>
+                        <td>931.79</td>
                         <td>931.79</td>
                         <td>1231.79</td>
                         <td>190</td>
@@ -582,6 +609,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>1031.79</td>
+                        <td>1031.79</td>
+                        <td>1031.79</td>
+                        <td>1031.79</td>
                         <td>1331.79</td>
                         <td>1100</td>
                         <td>1000</td>
@@ -638,6 +668,9 @@
                         <td>100024 <small class="text-lock">7300 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>1131.79</td>
+                        <td>1131.79</td>
+                        <td>1131.79</td>
                         <td>1131.79</td>
                         <td>1431.79</td>
                         <td>1110</td>
@@ -696,6 +729,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>1231.79</td>
+                        <td>1231.79</td>
+                        <td>1231.79</td>
+                        <td>1231.79</td>
                         <td>1531.79</td>
                         <td>1120</td>
                         <td>1200</td>
@@ -752,6 +788,9 @@
                         <td>100030 <small class="text-lock">7500 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>1331.79</td>
+                        <td>1331.79</td>
+                        <td>1331.79</td>
                         <td>1331.79</td>
                         <td>1631.79</td>
                         <td>1130</td>
@@ -810,6 +849,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>1431.79</td>
+                        <td>1431.79</td>
+                        <td>1431.79</td>
+                        <td>1431.79</td>
                         <td>1731.79</td>
                         <td>1140</td>
                         <td>1400</td>
@@ -866,6 +908,9 @@
                         <td>100036 <small class="text-lock">7700 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>1531.79</td>
+                        <td>1531.79</td>
+                        <td>1531.79</td>
                         <td>1531.79</td>
                         <td>1831.79</td>
                         <td>1150</td>
@@ -924,6 +969,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>1631.79</td>
+                        <td>1631.79</td>
+                        <td>1631.79</td>
+                        <td>1631.79</td>
                         <td>1931.79</td>
                         <td>1160</td>
                         <td>1600</td>
@@ -980,6 +1028,9 @@
                         <td>100042 <small class="text-lock">7900 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>1731.79</td>
+                        <td>1731.79</td>
+                        <td>1731.79</td>
                         <td>1731.79</td>
                         <td>2031.79</td>
                         <td>1170</td>
@@ -1038,6 +1089,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>1831.79</td>
+                        <td>1831.79</td>
+                        <td>1831.79</td>
+                        <td>1831.79</td>
                         <td>2131.79</td>
                         <td>1180</td>
                         <td>1800</td>
@@ -1094,6 +1148,9 @@
                         <td>100048 <small class="text-lock">8100 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>1931.79</td>
+                        <td>1931.79</td>
+                        <td>1931.79</td>
                         <td>1931.79</td>
                         <td>2231.79</td>
                         <td>1190</td>
@@ -1152,6 +1209,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>2031.79</td>
+                        <td>2031.79</td>
+                        <td>2031.79</td>
+                        <td>2031.79</td>
                         <td>2331.79</td>
                         <td>1200</td>
                         <td>2000</td>
@@ -1208,6 +1268,9 @@
                         <td>100054 <small class="text-lock">8300 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>2131.79</td>
+                        <td>2131.79</td>
+                        <td>2131.79</td>
                         <td>2131.79</td>
                         <td>2431.79</td>
                         <td>1210</td>
@@ -1266,6 +1329,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>2231.79</td>
+                        <td>2231.79</td>
+                        <td>2231.79</td>
+                        <td>2231.79</td>
                         <td>2531.79</td>
                         <td>1220</td>
                         <td>2200</td>
@@ -1322,6 +1388,9 @@
                         <td>100060 <small class="text-lock">8500 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>2331.79</td>
+                        <td>2331.79</td>
+                        <td>2331.79</td>
                         <td>2331.79</td>
                         <td>2631.79</td>
                         <td>1230</td>
@@ -1380,6 +1449,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>2431.79</td>
+                        <td>2431.79</td>
+                        <td>2431.79</td>
+                        <td>2431.79</td>
                         <td>2731.79</td>
                         <td>1240</td>
                         <td>2400</td>
@@ -1436,6 +1508,9 @@
                         <td>100066 <small class="text-lock">8700 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>2531.79</td>
+                        <td>2531.79</td>
+                        <td>2531.79</td>
                         <td>2531.79</td>
                         <td>2831.79</td>
                         <td>1250</td>
@@ -1494,6 +1569,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>2631.79</td>
+                        <td>2631.79</td>
+                        <td>2631.79</td>
+                        <td>2631.79</td>
                         <td>2931.79</td>
                         <td>1260</td>
                         <td>2600</td>
@@ -1550,6 +1628,9 @@
                         <td>100072 <small class="text-lock">8900 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>2731.79</td>
+                        <td>2731.79</td>
+                        <td>2731.79</td>
                         <td>2731.79</td>
                         <td>3031.79</td>
                         <td>1270</td>
@@ -1608,6 +1689,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>2831.79</td>
+                        <td>2831.79</td>
+                        <td>2831.79</td>
+                        <td>2831.79</td>
                         <td>3131.79</td>
                         <td>1280</td>
                         <td>2800</td>
@@ -1664,6 +1748,9 @@
                         <td>100078 <small class="text-lock">9100 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>2931.79</td>
+                        <td>2931.79</td>
+                        <td>2931.79</td>
                         <td>2931.79</td>
                         <td>3231.79</td>
                         <td>1290</td>
@@ -1722,6 +1809,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>3031.79</td>
+                        <td>3031.79</td>
+                        <td>3031.79</td>
+                        <td>3031.79</td>
                         <td>3331.79</td>
                         <td>1300</td>
                         <td>3000</td>
@@ -1779,6 +1869,9 @@
                                     class="fa fa-lock icons"></span></small>
                         </td>
                         <td>3131.79</td>
+                        <td>3131.79</td>
+                        <td>3131.79</td>
+                        <td>3131.79</td>
                         <td>3431.79</td>
                         <td>1310</td>
                         <td>3100</td>
@@ -1835,6 +1928,9 @@
                         <td>100087 <small class="text-lock">9400 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
+                        <td>3231.79</td>
+                        <td>3231.79</td>
+                        <td>3231.79</td>
                         <td>3231.79</td>
                         <td>3531.79</td>
                         <td>1320</td>
@@ -1997,23 +2093,6 @@
 
     $('.pages').css({
       minHeight: windowsHeight - (navbarHeight + footerHeight),
-    });
-  });
-
-  $('.switch-label').each(function () {
-    var $toggle = $(this);
-    var originalText = $toggle.find('.text').text();
-    var secondaryText = $toggle.data('toggle-text');
-    var $target = $($toggle.find('input[type="checkbox"]'));
-    // 
-    $target.on('change', function () {
-      if ($toggle.find('.text').text() == originalText) {
-        $toggle.find('.text').text(secondaryText);
-        $toggle.find('.lever').addClass('active');
-      } else {
-        $toggle.find('.text').text(originalText);
-        $toggle.find('.lever').removeClass('active');
-      }
     });
   });
 

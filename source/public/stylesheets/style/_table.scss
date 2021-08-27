@@ -1,0 +1,228 @@
+.table-symbols {
+	border-top: 1px solid $table-border-color;
+	font-size: 90%;
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				position: relative;
+				white-space: nowrap;
+				// font-size: 90%;
+				border: 1px solid $table-border-color;
+				&.dataTables_empty {
+					font-size: 200%;
+					text-align: center;
+					padding: $padding-base-horizontal * 6 0;
+				}
+				.text-lock {
+					font-size: 80%;
+					color: $gray;
+					margin-left: $padding-base-horizontal;
+					.icons {
+						border: 1px solid $default-border;
+						font-size: 80%;
+						color: $gray-light;
+						border-radius: $border-radius-full;
+						padding: 3px;
+					}
+				}
+				&.with-icon {
+					position: relative;
+					.icon {
+						margin-left: $padding-base-vertical;
+						// width: $padding-base-vertical * 3;
+						margin-top: -$padding-base-vertical;
+					}
+				}
+				&.bg-gray {
+					background-color: $table-bg-hover;
+				}
+				.dropdown-table {
+					float: right;
+					border: 0;
+					padding: 0;
+					margin-left: $padding-base-horizontal;
+					.dropdown-menu {
+						right: $padding-base-vertical * 3;
+						left: auto;
+						top: -$padding-base-vertical * 2;
+					}
+					.button {
+						border: 0;
+						padding: 0;
+						color: $gray-light;
+						background-color: transparent;
+					}
+					&.open {
+						.button {
+							color: $brand-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+	> thead > tr {
+		> th,
+		> td {
+			border-bottom-width: 1px;
+			background-color: darken($table-bg-hover, 4%);
+		}
+	}
+	> tbody > tr:hover {
+		background-color: $table-bg-hover;
+	}
+	&.collapsed {
+		tbody {
+			td,
+			th {
+				&:first-child {
+					position: relative;
+					padding-left: 30px;
+					cursor: pointer;
+					&:before {
+						top: 8px;
+						left: 4px;
+						height: 16px;
+						width: 16px;
+						display: block;
+						position: absolute;
+						color: white;
+						border-radius: 16px;
+						text-align: center;
+						line-height: 16px;
+						// box-shadow: 0 0 3px #444;
+						box-sizing: content-box;
+						content: '+';
+						background-color: $brand-green;
+					}
+				}
+			}
+			.parent {
+				background-color: $gray-lighter;
+				td,
+				th {
+					&:first-child {
+						&:before {
+							content: '-';
+							background-color: #d33333;
+						}
+					}
+				}
+			}
+			.child {
+				td,
+				th {
+					padding: 0;
+					&:first-child {
+						&:before {
+							display: none;
+						}
+					}
+					ul {
+						margin: 0;
+						padding: $padding-base-vertical $padding-base-horizontal;
+						li {
+							padding: $padding-base-vertical/2;
+							list-style: none;
+							span {
+								display: inline-block;
+								min-width: 50%;
+							}
+							.dtr-title {
+								font-weight: 600;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.table-symbols-pop {
+	border-top: 1px solid $table-border-color;
+	font-size: 90%;
+	> thead,
+	> tbody,
+	> tfoot {
+		> tr {
+			> th,
+			> td {
+				position: relative;
+				white-space: nowrap;
+				// font-size: 90%;
+				// 	border: 1px solid $table-border-color;
+				.text-lock {
+					font-size: 80%;
+					color: $gray;
+					margin-left: $padding-base-horizontal;
+					.icons {
+						border: 1px solid $default-border;
+						font-size: 80%;
+						color: $gray-light;
+						border-radius: $border-radius-full;
+						padding: 3px;
+					}
+				}
+				&.with-icon {
+					position: relative;
+					.icon {
+						margin-left: $padding-base-vertical;
+						// width: $padding-base-vertical * 3;
+						margin-top: -$padding-base-vertical;
+					}
+				}
+				&.bg-gray {
+					background-color: $table-bg-hover;
+				}
+				.dropdown-table {
+					float: right;
+					border: 0;
+					padding: 0;
+					margin-left: $padding-base-horizontal;
+					.dropdown-menu {
+						right: $padding-base-vertical * 3;
+						left: auto;
+						top: -$padding-base-vertical * 2;
+					}
+					.button {
+						border: 0;
+						padding: 0;
+						color: $gray-light;
+						background-color: transparent;
+					}
+					&.open {
+						.button {
+							color: $brand-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+	> thead > tr {
+		> th,
+		> td {
+			border-bottom-width: 1px;
+			background-color: darken($table-bg-hover, 4%);
+		}
+	}
+	// > tbody > tr:hover {
+	// 	background-color: $table-bg-hover;
+	// }
+}
+
+.table-bottom {
+	@media (max-width: $screen-md-min) {
+		margin: 0;
+		.dataTables_length {
+			margin-bottom: $padding-base-vertical;
+			label {
+				float: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,177 @@
+//
+// load more
+// --------------------------------------------------
+.no-display { display: none;}
+.load-more-sec{ text-align: center;
+    .load-more{ text-transform: uppercase; position: relative; 
+        &.wl{padding-left: 50px;} 
+    }
+    .loader-round-w { position: absolute; top: 50%; left: 1em; margin-top: -.8em; z-index: 5;} 
+    .loader-round-b { position: absolute; top: 50%; left: 1em; margin-top: -1em; z-index: 5;}
+}
+
+.view-all { text-align: center; 
+    .link{ text-transform: uppercase; position: relative; 
+        &.with-icon{padding-right: 60px;} 
+    }
+    .icd-ico { position: absolute; top: 50%; right: .5em; margin-top: -.52em; z-index: 5; font-size: 180%;}
+}
+
+.loader-round {
+  margin:0px auto;
+  font-size: 32px; 
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.2em solid rgba(0, 0, 0, 0.1);
+  border-right: .2em solid rgba(0, 0, 0, 0.1);
+  border-bottom: .2em solid rgba(0, 0, 0, 0.1);
+  border-left: .2em solid $brand-danger;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: key-linear-anmi .7s infinite linear;
+  animation: key-linear-anmi .7s infinite linear;
+}
+.loader-round,
+.loader-round:after {
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+}
+@-webkit-keyframes key-linear-anmi {
+  0% { 
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes key-linear-anmi {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); 
+  }
+  100% { 
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+//---------------
+.loader-round-w {
+  margin:0px auto;
+  display: inline-block; margin-right: 5px;
+  vertical-align: sub;
+  font-size:inherit ;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.15em solid rgba(255, 255, 255, 0.25);
+  border-right: .15em solid rgba(255, 255, 255, 0.25);
+  border-bottom: .15em solid rgba(255, 255, 255, 0.25);
+  border-left: .15em solid rgba(255, 255, 255, 1) ;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: key-linear-anmi .7s infinite linear;
+  animation: key-linear-anmi .7s infinite linear;
+}
+.loader-round-w,
+.loader-round-w:after {
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+}
+//-------------------------//
+
+.loader-round-b {
+  margin:0px auto;
+  display: inline-block; margin-right: 5px;
+  vertical-align: sub;
+  font-size:inherit ;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.18em solid rgba(0, 0, 0, 0.25);
+  border-right: .18em solid rgba(0, 0, 0, 0.25);
+  border-bottom: .18em solid rgba(0, 0, 0, 0.25);
+  border-left: .18em solid rgba(0, 0, 0, 1);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: key-linear-anmi .7s infinite linear;
+  animation: key-linear-anmi .7s infinite linear;
+}
+.loader-round-b,
+.loader-round-b:after {
+  border-radius: 50%;
+  width: 1.7em;
+  height: 1.7em;
+}
+//-------------------------------
+.loader-elastic,
+.loader-elastic:before,
+.loader-elastic:after {
+  border-radius: 50%;
+}
+.loader-elastic:before,
+.loader-elastic:after {
+  position: absolute;
+  content: '';
+}
+.loader-elastic:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: $brand-white; 
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.2em 5.1em;
+  transform-origin: 5.2em 5.1em;
+  -webkit-animation: key-elastic 2s infinite ease 1.5s;
+  animation: key-elastic 2s infinite ease 1.5s;
+}
+.loader-elastic {
+  color: $brand-danger;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader-elastic:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: $brand-white;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 5.1em;
+  -webkit-transform-origin: 0px 5.1em;
+  transform-origin: 0px 5.1em;
+  -webkit-animation: key-elastic 2s infinite ease;
+  animation: key-elastic 2s infinite ease;
+}
+@-webkit-keyframes key-elastic {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes key-elastic {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

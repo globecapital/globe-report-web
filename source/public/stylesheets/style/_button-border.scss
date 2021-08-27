@@ -1,0 +1,197 @@
+//
+// booking card form
+// --------------------------------------------------
+
+.btn-borderd {
+    @include transition(0.15s ease-out);
+    display: inline-block;
+    margin-bottom: 0; // For input.btn-borderd
+    font-weight: $btn-font-weight;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    //font-family: $font-family-khand;
+    background-color: transparent;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 2px solid transparent;
+    @include button-size($padding-base-vertical+(-2), $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    border-radius: $border-radius-base; 
+
+    &,
+    &:active,
+    &.active {
+
+        &:focus,
+        &.focus {
+            @include tab-focus;
+        }
+    }
+
+    &.round {
+        border-radius: $border-radius-half;
+    }
+
+
+    &:hover,
+    &:focus,
+    &.focus {
+        //color: $btn-default-color;
+        
+    }
+
+    &:active,
+    &.active {
+        background-image: none;
+        outline: 0;
+        @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, .125));
+    }
+
+    &.hoverable:hover,
+    &.hoverable:focus,
+    &.hoverable.focus {
+        
+        @include z-depth-btn; 
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+        @include opacity(.65);
+        @include box-shadow(none);
+    }
+
+    // [converter] extracted a& to a.btn-borderd
+}
+
+a.btn-borderd {
+
+    &.disabled,
+    fieldset[disabled] & {
+        pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+}
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-borderd-link {
+    font-weight: 400;
+    color: $link-color;
+    border-radius: 0;
+
+    &,
+    &:active,
+    &.active,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: transparent;
+        @include box-shadow(none);
+    }
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+    }
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+        background-color: transparent;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+
+        &:hover,
+        &:focus {
+            color: $btn-link-disabled-color;
+            
+        }
+    }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-borderd-lg {
+    // line-height: ensure even-numbered height of button next to large input
+    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+}
+
+.btn-borderd-sm {
+    // line-height: ensure proper height of button next to small input
+    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+.btn-borderd-xs {
+    @include button-size($padding-xs-vertical, $padding-xs-horizontal+4, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-borderd-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-borderd-block+.btn-borderd-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.btn-borderd-block {
+        width: 100%;
+    }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-borderd-theme{@include button-borderd-variant ($btn-theme-border); } 
+.btn-borderd-secondary{@include button-borderd-variant ($btn-secondary-border); }
+.btn-borderd-alernative{@include button-borderd-variant ($btn-alernative-border); } 
+.btn-borderd-default{@include button-borderd-variant ($btn-default-border); }
+.btn-borderd-primary{@include button-borderd-variant ($btn-primary-border); }
+.btn-borderd-success{@include button-borderd-variant ($btn-success-border); }
+.btn-borderd-info{@include button-borderd-variant ($btn-info-border); } 
+.btn-borderd-warning{@include button-borderd-variant ($btn-warning-border); }
+.btn-borderd-danger{@include button-borderd-variant ($btn-danger-border); }
+.btn-borderd-deep-orange{@include button-borderd-variant ($btn-deep-orange-border); }
+.btn-borderd-yellow{@include button-borderd-variant ($btn-yellow-border); }
+//.btn-borderd-white{@include button-borderd-variant ($btn-white-border); }
+// .btn-borderd-light-red{@include button-borderd-variant ($btn-light-red-border); }
+// .btn-borderd-pink{@include button-borderd-variant ($btn-pink-border); }
+// .btn-borderd-gray{@include button-borderd-variant ($btn-gray-border); }
+// .btn-borderd-violet{@include button-borderd-variant ($btn-violet-border); }
+// .btn-borderd-blue{@include button-borderd-variant ($btn-blue-border); }
+// .btn-borderd-blue-grey{@include button-borderd-variant ($btn-blue-grey-border); }
+// .btn-borderd-brown{@include button-borderd-variant ($btn-brown-border); }
+// .btn-borderd-green{@include button-borderd-variant ($btn-green-border); }
+// .btn-borderd-lime{@include button-borderd-variant ($btn-lime-border); }
+// .btn-borderd-light-blue{@include button-borderd-variant ($btn-light-blue-border); }
+// .btn-borderd-cyan{@include button-borderd-variant ($btn-cyan-border); }
+// .btn-borderd-teal{@include button-borderd-variant ($btn-teal-border); }
+// .btn-borderd-purple{@include button-borderd-variant ($btn-purple-border); }
+// .btn-borderd-indigo{@include button-borderd-variant ($btn-indigo-border); }
+// .btn-borderd-orange{@include button-borderd-variant ($btn-orange-border); }
+// .btn-borderd-grey{@include button-borderd-variant ($default-border); }
+//.btn-borderd-maroon{@include button-borderd-variant ($btn-maroon-border); } 
+//.btn-borderd-grey{@include button-borderd-variant ($btn-inverse-border);}
+//.btn-theme-other {@include button-borderd-variant ($btn-theme-other-border); border-width: 1px; }

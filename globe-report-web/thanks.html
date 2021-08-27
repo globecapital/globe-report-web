@@ -67,9 +67,10 @@
           <ul class="dropdown-menu">
             <li><a href="index.html">Ledger Report</a></li>
             <li><a href="holdings-report.html">Holdings Report</a></li>
-            <li><a href="mtf-holdings-report.html">MTF Holding</a></li>
+            <!-- <li><a href="mtf-holdings-report.html">MTF Holding</a></li> -->
             <li><a href="profit-and-loss.html">P&L Report</a></li>
             <li><a href="transaction-roport.html">Transaction Report</a></li>
+            <li><a href="download-roport.html">Download Report</a></li>
           </ul>
         </li>
         <!-- <li class="icons-text"><a href="#"><span class="fa fa-search icons"></span></a></li> -->
@@ -182,23 +183,6 @@
 
     $('.pages').css({
       minHeight: windowsHeight - (navbarHeight + footerHeight),
-    });
-  });
-
-  $('.switch-label').each(function () {
-    var $toggle = $(this);
-    var originalText = $toggle.find('.text').text();
-    var secondaryText = $toggle.data('toggle-text');
-    var $target = $($toggle.find('input[type="checkbox"]'));
-    // 
-    $target.on('change', function () {
-      if ($toggle.find('.text').text() == originalText) {
-        $toggle.find('.text').text(secondaryText);
-        $toggle.find('.lever').addClass('active');
-      } else {
-        $toggle.find('.text').text(originalText);
-        $toggle.find('.lever').removeClass('active');
-      }
     });
   });
 

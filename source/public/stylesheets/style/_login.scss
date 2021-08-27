@@ -1,0 +1,80 @@
+// --------------------------------------------------
+.section-admin-login {
+  background: rgba($gray-base, 0.1);
+  padding: 0;
+  &:after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    top: 0;
+    width: 100%;
+    height: 52%;
+    background: rgba(0, 0, 0, 0.03);
+  }
+}
+
+.login-logo-outer {
+  text-align: center;
+  margin-bottom: $padding-base-horizontal;
+  .profile-login-logo {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+    img {
+      margin: 0 auto;
+      display: block;
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.login-form {
+    padding: $padding-base-horizontal 0;
+  .login-section {
+    top: 50%;
+    margin-top: -240px;
+    position: absolute;
+    width: 410px;
+    left: 50%;
+    margin-left: -205px;
+    z-index: 33;
+  }
+
+  .card-signup {
+    padding: 30px;
+    border-radius: $border-radius-base;
+    background: $brand-white;
+  }
+  .signup-inner .profile-login-logo {
+  }
+  .valign {
+  }
+  .login-form-text {
+    font-size: 320%;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    .small {
+      display: block;
+      font-size: 35%;
+      color: $brand-blue;
+    }
+  }
+  @media (max-width: $screen-xs-min) {
+    .login-section {
+      top: auto;
+      margin-top: auto;
+      margin-left: auto;
+      position: relative;
+      width: 92%;
+      left: auto;
+      margin: 0 auto;
+      z-index: 33;
+    }
+  }
+}
+
+.errorHandler {
+  display: none;
+}

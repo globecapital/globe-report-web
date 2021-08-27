@@ -1,0 +1,68 @@
+//
+// Forms
+// --------------------------------------------------
+label {
+	font-weight: 400;
+	font-size: 90%;
+}
+
+.form-control {
+	border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+	border-width: 2px;
+	@include box-shadow(none);
+	//background-color: $bran
+
+	&:focus {
+		@include box-shadow(none);
+		border-color: $input-border-focus;
+	}
+
+	@include transition(
+		border-color ease-in-out 0.15s,
+		box-shadow ease-in-out 0.15s
+	); // [converter] extracted textarea& to textarea.form-control
+}
+
+.form-group {
+	position: relative;
+
+	label,
+	.control-label {
+		font-size: 90%;
+		font-weight: 500;
+		// @include transition(0.15s ease-out);
+		// position: absolute;
+		// left: 15px;
+		// z-index: 3;
+		// top: 12px;
+		// font-size: 100%;
+		// background-color: $brand-white;
+		// line-height: 1;
+		// border-radius: $border-radius-half;
+		// padding: 2px 5px;
+	}
+
+	&.with-btn {
+		padding-top: $padding-base-horizontal*2;
+	}
+
+	&.is-focused,
+	&.selected {
+		label {
+			color: $input-border-focus;
+		}
+		.form-control {
+			border-color: $input-border-focus;
+		}
+		.icons {
+			color: $input-border-focus;
+		}
+	}
+	&.is-filled,
+	&.is-value {
+	}
+}
+
+textarea {
+	resize: vertical;
+}

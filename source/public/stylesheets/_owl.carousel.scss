@@ -1,0 +1,68 @@
+
+
+// ---------
+
+$slider-bg-color                                   : $gray-base, 75% !default;
+$slider-bg-color-light                             : lighten($gray-base, 75%) !default;
+$slider-indicator-color                            : $brand-success !default;
+
+$fornt-page-slider-bg-color                        : $brand-white !default;
+$fornt-page-slider-bg-color-light                  : $gray-dark  !default;
+$fornt-page-slider-indicator-color                 : lighten($brand-danger ,20%) !default;
+
+$fornt-page-slider-outlets-color                   : darken($brand-danger ,20%) !default;
+$fornt-page-slider-outlets-span-color              : $gray !default;
+$fornt-page-slider-outlets-about-color             : $brand-white !default;
+
+$avatars-height                                   : 200px !default;
+
+@import 'owl.carousel/animate';
+@import 'owl.carousel/autoheight';
+@import 'owl.carousel/core';
+@import 'owl.carousel/lazyload';
+@import 'owl.carousel/theme';
+@import 'owl.carousel/theme';
+@import 'owl.carousel/video'; 
+
+.frontpage-testimonials {
+    padding: 3em 0 5em;
+    li { list-style: none;}
+   .header {
+       text-align: center;
+        padding: 1em 0 .5em;
+       margin: 0;
+        margin-bottom: 1em;
+        position: relative;
+        font-size: 300%;
+        line-height: 1;
+       font-weight: 300;
+       text-transform: uppercase;
+        &:after {
+            content: "";
+            width: 100px;
+            position: absolute; 
+            left: 50%;
+            bottom: 0;
+            margin-left: -50px;
+            height: 2px;
+            background: $brand-primary;
+            z-index: 2;
+        }
+    }
+    .testimonials-slider {margin-bottom: 2em; }
+    .avatars {
+        position: absolute; top: 0; left: 0; width: $avatars-height; 
+        img{ }
+    }
+    .testimonials-content { position: relative;  min-height: $avatars-height+40;
+        padding-left: $avatars-height+100; padding-top: 2em;
+        .avatars-about {
+            font-family: $font-family-serif;
+            color: $gray-lightst;
+            margin-top: 2em;
+            font-style: italic;
+        }
+        &:after { position: absolute; top: 0; left: $avatars-height+40; z-index: 2; font-size: 300%; font-family: 'icodehome-ico'; content: "\ecc4"; color: $gray-lighter}
+    }
+    .owl-nav { display: none;}
+}  

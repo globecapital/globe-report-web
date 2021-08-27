@@ -1,0 +1,98 @@
+.page-layout {
+	padding-top: $navbar-height;
+}
+.siteLogo {
+	svg {
+		width: 30em;
+		margin: 0 auto;
+		display: block;
+	}
+}
+.site-padding {
+	padding: $padding-base-horizontal * 2 0;
+	@media (max-width: $screen-xs-min) {
+		padding: 0;
+	}
+}
+#slidenavbar-overlay {
+	position: fixed;
+	top: 0;
+	height: 120vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 997;
+	will-change: opacity;
+}
+
+.heading-page {
+	position: relative;
+	z-index: 10;
+	margin-bottom: $padding-base-horizontal;
+
+	.heading {
+		font-size: 200%;
+		//color: $brand-default;
+		font-weight: 500;
+		margin-bottom: $padding-base-horizontal*0.5;
+		position: relative;
+		&.with-line {
+			margin-bottom: $padding-base-horizontal;
+			padding-bottom: $padding-base-horizontal;
+			&:before {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100px;
+				height: 4px;
+				background-color: $brand-default;
+				content: '';
+				font-family: $font-awesome-free;
+				font-weight: 600;
+			}
+		}
+	}
+
+	.sub-heading {
+		font-size: 100%;
+		//color: $brand-alernative;
+		font-weight: 300;
+	}
+
+	.header {
+		font-size: 220%;
+		text-transform: uppercase;
+		color: $gray;
+		font-weight: 700;
+	}
+
+	@media (max-width: $screen-xs-min) {
+		.heading {
+			font-size: 160%;
+			font-weight: 700;
+		}
+
+		.sub-heading {
+			font-size: 90%;
+			font-weight: 300;
+		}
+	}
+}
+
+.service-section {
+	// background: $brand-white;
+	padding: $padding-base-horizontal 0;
+	.service-header {
+		margin-bottom: 1em;
+	}
+	.service-sub-header {
+		margin-bottom: 3em;
+	}
+}
+
+.text-note {
+	font-size: 80%;
+	color: $gray;
+}
+
+.no-margin {
+	margin: 0; 
+}

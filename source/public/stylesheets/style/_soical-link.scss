@@ -1,0 +1,61 @@
+//
+// social link
+// --------------------------------------------------
+.social-menu { 
+    a[href*="codepen.io"] { &:hover,  &:focus { color: $brand-primary; } }
+    a[href*="digg.com"] { &:hover,  &:focus { color: $brand-info; } }
+    a[href*="dribbble.com"],
+    a[href*="flickr.com"] { &:hover,  &:focus { color: #C73B6F; } }
+    a[href*="dropbox.com"] { &:hover,  &:focus { color: #3d9ae8; } }
+    a[href*="facebook.com"] { &:hover,  &:focus { color: #3b5998; } }
+    a[href*="foursquare.com"] { &:hover,  &:focus { color: $brand-warning; } }
+    a[href*="plus.google.com"] { &:hover,  &:focus { color: $brand-danger; } }
+    a[href*="github.com"] { &:hover,  &:focus { color: $brand-info; } }
+    a[href*="instagram.com"] { &:hover,  &:focus { color: #8a3ab9; } }
+    a[href*="linkedin.com"] { &:hover,  &:focus { color: #4875B4; } }
+    a[href*="pinterest.com"] { &:hover,  &:focus { color: $brand-danger; } }
+    a[href*="reddit.com"] { &:hover,  &:focus { color: #C73B6F; } }
+    a[href*="skype.com"] { &:hover,  &:focus { color: $brand-info; } }
+    a[href*="stumbleupon.com"] { &:hover,  &:focus { color: #f74425; } }
+    a[href*="twitter.com"] { &:hover,  &:focus { color: $brand-info; } }
+    a[href*="youtube.com"] { &:hover,  &:focus { color: $brand-danger; } }
+    a[href^="mailto:"] { &:hover,  &:focus { color: $brand-primary; } }
+    a[href*="spotify.com"] { &:hover,  &:focus { color: $brand-primary; } }
+    a[href$="/feed/"] { &:hover,  &:focus { color: $brand-warning; } }
+    a:before { -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Font Awesome 5 Brands';
+        font-size: 150%;
+        font-style: normal;
+        font-variant: normal; 
+        font-weight: normal;
+        speak: none;
+        text-decoration: inherit;
+        vertical-align: middle; }
+    
+    a[href*="codepen.io"]:before { content: "\f1cb"; }
+    a[href*="digg.com"]:before { content: "\f1a6"; }
+    a[href*="dribbble.com"]:before { content: "\f17d"; }
+    a[href*="dropbox.com"]:before { content: "\f16b"; }
+    a[href*="facebook.com"]:before { content: "\f39e"; }
+    a[href*="flickr.com"]:before { content: "\f16e"; }
+    a[href*="foursquare.com"]:before { content: "\f180"; }
+    a[href*="plus.google.com"]:before { content: "\f0d5"; }
+    a[href*="github.com"]:before { content: "\f09b"; }
+    a[href*="instagram.com"]:before { content: "\f16d"; }
+    a[href*="linkedin.com"]:before { content: "\f0e1"; }
+    a[href*="pinterest.com"]:before { content: "\f231"; }
+    a[href*="reddit.com"]:before { content: "\f281"; }
+    a[href*="skype.com"]:before { content: "\f17e"; }
+    a[href*="stumbleupon.com"]:before { content: "\f1a4"; }
+    /* a[href*="tumblr.com"]:before { content: "\f173"; }*/
+    a[href*="twitter.com"]:before { content: "\f099"; }
+    /*a[href*="vimeo.com"]:before { content: "\f27d"; }
+    a[href*="wordpress.com"]:before,
+    a[href*="wordpress.org"]:before { content: "\f19a"; }*/
+    a[href*="youtube.com"]:before { content: "\f167"; }
+    a[href^="mailto:"]:before { content: "\f0e0"; }
+    a[href*="spotify.com"]:before { content: "\f1bc"; }
+    /* a[href*="twitch.tv"]:before { content: "\f1e8"; }*/
+    a[href$="/feed/"]:before { content: "\f09e"; }
+}

@@ -1,0 +1,203 @@
+<!-- Sign up modal -->
+<div class="modal fade modalLoop" id="signupModal" role="dialog">
+    <div class="modal-dialog dialog-signup" role="document">
+        <div class="modalpop-forms">
+            <div class="modalpop-header">
+                <button type="button" class="remove" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">
+                        <i class="fa fa-times"></i> </span> </button>
+                <div class="heading">
+                    <div class="header">Login</div>
+                    <div class="sub-header">Enter your login detail blow</div>
+                </div>
+            </div>
+            <form action="" name="signup_frm" method="post">
+                <div class="modalpop-body">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="" for="emailid">First name</label>
+                                    <div class="position-rel">
+                                        <input type="email" class="form-control" id="Studentname" name="emailid"
+                                            placeholder="Student first name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="" for="emailid">Last name</label>
+                                    <div class="position-rel">
+                                        <input type="email" class="form-control" name="emailid" placeholder="Last name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="" for="emailid">Email Id</label>
+                            <div class="position-rel">
+                                <input type="email" class="form-control" name="emailid"
+                                    placeholder="username@sitedomin.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="" for="emailid">Whats app No.</label>
+                            <div class="position-rel">
+                                <input type="email" class="form-control" name="text" placeholder="Whats app No.">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Country</label>
+                            <select class="form-control show-tick" title="Select Country" data-style="btn-white"
+                                data-live-search="true">
+                                <option value="AX">Åland Islands</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                                <option value="AQ">Antarctica</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="" for="Password">Password</label>
+                            <div class="position-rel">
+                                <input type="password" class="form-control password " id="password" name="password"
+                                    placeholder="Password">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modalpop-footer">
+                    <button type="button" data-target="#sccessModal" data-toggle="modal"
+                        class="btn hoverable waves-effect waves-light btn-theme register"> Proceed </button>
+                    <div class="new-account"> Already have an account? <a href="#loginModal" data-toggle="modal"
+                            class=""> Log In</a> </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Login modal -->
+
+<div class="modal fade modalLoop" id="loginModal" role="dialog">
+    <div class="modal-dialog dialog-login" role="document">
+        <div class="modalpop-forms">
+            <div class="modalpop-header">
+                <button type="button" class="remove" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">
+                        <i class="fa fa-times"></i> </span> </button>
+                <div class="heading">
+                    <div class="header">Login</div>
+                    <div class="sub-header">Enter your login detail blow</div>
+                </div>
+            </div>
+            <form action="" name="signup_frm" method="post">
+                <div class="modalpop-body">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="" for="username">E-mail ID</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                placeholder="username@sitedomin.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="" for="logpassword">Password</label>
+                            <div class="position-rel">
+                                <input type="password" class="form-control password " id="logpassword"
+                                    name="logpassword" placeholder="Password">
+                                <div class="forgot"> <a href="#forgotModal" data-toggle="modal">I forgot my password
+                                    </a> </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modalpop-footer">
+                    <button type="button" data-target="#sccessModal" data-toggle="modal"
+                        class="btn hoverable waves-effect waves-light btn-theme register"> Proceed </button>
+                    <div class="new-account"> Don't have an account ? <a href="#signupModal" data-toggle="modal"
+                            class=""> Create an account </a> </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Sccess modal -->
+<div class="modal fade modalLoop" id="sccessModal">
+    <div class="modal-dialog dialog-login modal-margin" role="document">
+        <div class="modalpop-forms">
+            <button type="button" class="remove" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"> <i
+                        class="fa fa-times"></i> </span> </button>
+            <div class="modalpop-body sucess-body">
+                <h3 class="modal-title">You have successfully loged in</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Forget Password?  -->
+<div class="modal fade modalLoop" id="forgotModal" role="dialog">
+    <div class="modal-dialog dialog-login" role="document">
+        <div class="modalpop-forms">
+            <div class="modalpop-header">
+                <button type="button" class="remove" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">
+                        <i class="fa fa-times"></i> </span> </button>
+                <div class="heading">
+                    <div class="header">Forget Password?</div>
+                </div>
+            </div>
+            <form action="" name="forgotPassForm" method="post">
+                <div class="modalpop-body">
+                    <div class="alert alert-danger errorHandler" id="adminLogin"> <span>Password is incorrect. Please
+                            try again</span> </div>
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="" for="forgotPass">Enter your e-mail address below to reset your password.
+                            </label>
+                            <div class="position-rel">
+                                <input type="email" class="form-control " id="forgotPass" name="forgotPass"
+                                    placeholder="Enter your e-mail address">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="modalpop-footer clearfix">
+                    <button type="button" data-target="#resetPassModal" data-toggle="modal"
+                        class="btn hoverable waves-effect waves-light btn-theme register"> Confirm Request </button>
+                    <div class="new-account">Already have an account? <a data-target="#loginModal" data-toggle="modal">
+                            Log-in </a> </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end Reset Your Password  -->
+<div class="modal fade modalLoop" id="resetPassModal" role="dialog">
+    <div class="modal-dialog dialog-login" role="document">
+        <div class="modalpop-forms">
+            <div class="modalpop-header">
+                <button type="button" class="remove" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">
+                        <i class="fa fa-times"></i> </span> </button>
+                <h3 class="modal-title">Reset Your Password</h3>
+            </div>
+            <div class="modalpop-body">
+                <div class="well well-xs">
+                    <p>Please reset your Account Password has been sent to your registered Email id (please check your
+                        spam
+                        folder also). </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Confirm modal -->
+<div class="modal fade modalLoop" id="confirmModal">
+    <div class="modal-dialog dialog-login modal-margin" role="document">
+        <div class="modalpop-forms">
+            <button type="button" class="remove" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"> <i
+                        class="fa fa-times"></i> </span> </button>
+            <div class="modalpop-body sucess-body">
+                <h3 class="modal-title">You have successfully loged in</h3>
+                <p>We'll send a confirmation email to your email id</p>
+            </div>
+        </div>
+    </div>
+</div>

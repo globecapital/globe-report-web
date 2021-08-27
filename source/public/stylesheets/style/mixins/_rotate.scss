@@ -1,0 +1,8 @@
+// Button variants
+//
+
+
+@mixin icon-rotate($degrees, $rotation) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
+  transform: rotate($degrees);
+}

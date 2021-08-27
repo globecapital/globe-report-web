@@ -1,0 +1,34 @@
+@use "sass:list";
+@use "sass:math";
+
+@include text-emphasis-variant('.text-deep-orange', $brand-deep-orange);
+@include text-emphasis-variant('.text-yellow', $brand-yellow);
+@include text-emphasis-variant('.text-white', $brand-white);
+@include text-emphasis-variant('.text-light-red', $brand-light-red);
+@include text-emphasis-variant('.text-pink', $brand-pink);
+@include text-emphasis-variant('.text-gray', $brand-gray);
+@include text-emphasis-variant('.text-violet', $brand-violet);
+@include text-emphasis-variant('.text-blue', $brand-blue);
+// @include text-emphasis-variant('.text-blue-grey', $brand-blue-grey);
+@include text-emphasis-variant('.text-brown', $brand-brown);
+@include text-emphasis-variant('.text-green', $brand-green);
+@include text-emphasis-variant('.text-lime', $brand-lime);
+@include text-emphasis-variant('.text-light-blue', $brand-light-blue);
+@include text-emphasis-variant('.text-cyan', $brand-cyan);
+@include text-emphasis-variant('.text-teal', $brand-teal);
+@include text-emphasis-variant('.text-purple', $brand-purple);
+@include text-emphasis-variant('.text-indigo', $brand-indigo);
+@include text-emphasis-variant('.text-orange', $brand-orange);
+@include text-emphasis-variant('.text-maroon', $brand-maroon);
+@include text-emphasis-variant('.text-default', $brand-default);
+@include text-emphasis-variant('.text-secondary', $brand-secondary);
+// @include text-emphasis-variant('.text-alernative', $brand-alernative);
+@include text-emphasis-variant('.text-ico-color', $brand-ico-color);
+@include text-emphasis-variant('.text-other', $brand-other);
+
+
+@include bg-variant('.bg-primary', $brand-primary);
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);

@@ -1,0 +1,86 @@
+// Animations
+@keyframes clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes bounce  {
+  0%, 100% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes translate {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes move-right {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes square-fill {
+  0%, 25%, 100% {
+    height: 0;
+  }
+  50%, 75% {
+    height: 100%;
+  }
+}
+
+@keyframes square-clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  25%, 50% {
+    transform: rotate(180deg);
+  }
+  75%, 100% {
+    transform: rotate(360deg);
+  }
+}
+
+// animated font glyphs
+.ui-animate {
+  &.clockwise .ui-icon,
+  &.anti-clockwise .ui-icon {
+    animation: clockwise 1s infinite linear;
+  }
+
+  &.anti-clockwise .ui-icon {
+    animation-direction: reverse;
+  }
+
+  &.bounce .ui-icon:before {
+    animation: bounce 1s infinite ease-in-out;
+  }
+}
+
+.ui-loading-icon {
+  &.ui-icon-circle,
+  &.ui-icon-comet,
+  &.ui-icon-planet {
+    animation: clockwise 1s infinite linear;
+  }
+
+  &.ui-icon-balls,
+  &.ui-icon-lines {
+    animation: clockwise 1s infinite ease-in-out;
+  }
+}

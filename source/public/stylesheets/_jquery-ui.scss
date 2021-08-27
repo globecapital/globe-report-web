@@ -1,0 +1,16 @@
+// Core variables and mixins
+@import "variables";
+@import "bootstrap/mixins";
+@import "style/mixins";
+@import "style/waves";
+
+@import "style/jquery-ui/core/helpers";
+@import "style/jquery-ui/core/widgets";
+@import "style/jquery-ui/core/states";
+@import "style/jquery-ui/core/animations";
+@import "style/jquery-ui/core/corner";
+
+@import "style/jquery-ui/datepicker";
+// @import "jquery-ui/progressbar";
+// @import "jquery-ui/selectmenu";
+@import "style/jquery-ui/slider"; 

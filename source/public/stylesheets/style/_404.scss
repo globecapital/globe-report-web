@@ -1,0 +1,43 @@
+//
+// 
+// --------------------------------------------------
+.page-error {
+    padding: 1em 0;
+
+    .error-number {
+        font-size: 800%;
+        line-height: 1;
+        text-shadow: 2px 5px 10px rgba($brand-default, .3);
+        text-align: center;
+        font-weight: 800;
+        color: $brand-default;
+    }
+
+    .error-header {
+        margin: 0;
+        text-align: center;
+        font-size: 120%;
+        width: 60%;
+        line-height: 1.2;
+        margin: 0 auto;
+        color: $brand-primary;
+
+    }
+
+    .banner-notfound {
+        width: 80%;
+        margin: 20px auto;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .form-404 {
+        margin: 2em auto;
+        max-width: 500px;
+    }
+}
+
+.dashboard-404-page {}

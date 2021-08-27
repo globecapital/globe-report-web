@@ -1,0 +1,113 @@
+//
+// Footer
+// --------------------------------------------------
+@use "sass:math";
+
+.move-top {
+	position: fixed;
+	right: 20px;
+	bottom: 15px;
+	padding: $padding-base-vertical 0;
+	width: $input-height-base + 10;
+	height: $input-height-base + 10;
+	line-height: math.div($input-height-base, 1.3);
+	text-align: center;
+	font-size: 140%;
+	border-radius: 50%;
+	z-index: 999;
+	background: $brand-white;
+	color: $brand-info;
+	border: 1px solid $brand-info;
+
+	&:hover {
+		background-color: $brand-info;
+		color: $brand-white;
+		border-color: darken($brand-info, 10%);
+	}
+}
+.page-footer {
+	
+	color: $footer-base-color;
+	font-weight: 300;
+	padding-top: $padding-base-horizontal + $padding-base-vertical;
+	// position: fixed;
+	// bottom: 0;
+	// z-index: 100;
+	// right: 0;
+	left: 0;
+	// @include z-depth-1-half;
+	.header {
+		position: relative;
+		color: $footer-header-color;
+		font-size: 160%;
+		padding: 0;
+		margin: 0;
+		padding-bottom: $padding-base-horizontal;
+		margin-bottom: $padding-base-horizontal;
+		&:before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 15%;
+			height: 3px;
+			background-color: $brand-default;
+			content: '';
+			font-family: $font-awesome-free;
+			font-weight: 600;
+		}
+	}
+	.footer-btn {
+		&.right {
+			text-align: right;
+		}
+	}
+}
+
+.footer-copyright {
+	background: $footer-bg;
+	// background-color: rgba($gray-base, .05);
+	padding: $padding-base-vertical 0;
+	// margin-top: $padding-base-horizontal;
+	.header {
+		position: relative;
+		text-align: center;
+		font-family: $font-family-serif;
+
+		color: $footer-header-color;
+		font-size: 160%;
+		&:before,
+		&:after {
+			position: absolute;
+			top: 50%;
+			margin-top: -1px;
+			height: 1px;
+			width: 30%;
+			content: '';
+			background-color: rgba(255, 255, 255, 0.1);
+			z-index: 1;
+			@media (max-width: $screen-sm-min) {
+				width: 15%;
+			}
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+	}
+	.copy-text {
+		text-align: center;
+		font-size: 90%;
+		a {
+			color: inherit;
+			&:hover {
+				color: $brand-white;
+			}
+		}
+	}
+	&.with-bg {
+		background: $footer-bg;
+		@include z-depth-1-half;
+	}
+}

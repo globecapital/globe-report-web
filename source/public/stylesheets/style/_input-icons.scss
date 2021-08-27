@@ -1,0 +1,125 @@
+//
+// Input Icons
+// --------------------------------------------------
+.input-icon {
+    position: relative;
+    display: block;
+    >[class*="fa"],
+    >[class*="fas"],
+    >[class*="far"],
+    >[class*="fal"],
+    >[class*="fab"],
+    >[class*="glyphicon-"] {
+        color: $gray-light;
+        display: block;
+        left: 15px;
+        //font-size: 90%;
+        position: absolute;
+        top: $input-height-base*0.5; 
+        margin-top: -6px;
+        z-index: 8;
+    }
+    >input {
+        padding-left: 40px;
+        padding-right: 5px;
+        &:focus+[class*="fa"],
+        &:focus+[class*="fas"],
+        &:focus+[class*="far"],
+        &:focus+[class*="fal"],
+        &:focus+[class*="fab"],
+        &:focus+[class*="glyphicon-"],
+        &:focus+[class*="input-ico-gray"] {
+            color: $input-border-focus;
+        }
+    }
+    &.input-icon-right {
+        >input {
+            padding-left: 15px;
+            padding-right: 40px;
+        }
+        >[class*="icd-ico"],
+        >[class*="fa"],
+        >[class*="fas"],
+        >[class*="far"],
+        >[class*="fal"],
+        >[class*="fab"],
+        >[class*="glyphicon-"] {
+            left: auto;
+            right: 13px;
+        }
+    }
+    >[class*="input-ico-gray"] {
+        left: 13px;
+        top: 50%;
+        position: absolute;
+        margin-top: -11px;
+    }
+    &.input-icon-sm {
+        >[class*="fa"],
+        >[class*="fas"],
+        >[class*="far"],
+        >[class*="fal"],
+        >[class*="fab"],
+        >[class*="glyphicon-"] {
+            color: $gray-light;
+            display: block;
+            left: 12px;
+            font-size: 100%;
+            position: absolute;
+            top: 50%;
+            margin-top: -7px;
+            z-index: 8;
+        }
+        >input {
+            padding-left: 30px;
+            padding-right: 3px;
+        }
+    }
+    textarea.form-control{
+        padding-left: 40px;
+        padding-right: 5px;
+    }
+}
+
+.input-btns {
+    >[class*="fa"],
+    >[class*="fas"],
+    >[class*="far"],
+    >[class*="fal"],
+    >[class*="fab"],
+    >[class*="glyphicon-"] {
+        color: $brand-white;
+        display: block;
+        left: 13px;
+        font-size: 200%;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        z-index: 8;
+        &.right {
+            left: auto;
+            right: 13px;
+        }
+    }
+}
+
+.file-field{
+    .input-group-btn{
+        position: relative;
+        overflow: hidden;
+    }
+    input[type="file"] {
+        display: block;
+        text-indent: -9999;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        //padding: 100px;
+        border: 0;
+        @include opacity(0);
+        cursor: pointer;
+    }
+}

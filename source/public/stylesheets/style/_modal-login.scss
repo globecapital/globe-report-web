@@ -1,0 +1,193 @@
+//
+// modal
+// --------------------------------------------------
+
+.modalLoop {
+	.dialog-login {
+		width: 460px;
+		margin: 30px auto;
+	}
+	.dialog-signup {
+		width: 580px;
+		margin: 30px auto;
+	}
+}
+
+.modal-content {
+	&.modalpop-forms {
+		background-color: $brand-white;
+		border-radius: $border-radius-base + 10;
+		// min-height: 140px;
+		.profile-login-logo {
+			text-align: center;
+			max-width: 160px;
+			margin: 0 auto 1em;
+			img {
+				width: 100%;
+				display: block;
+			}
+		}
+		.login-form-text {
+			text-align: center;
+			border-top: 1px solid $default-border;
+			padding-top: 0.5em;
+			font-size: 140%;
+			text-transform: uppercase;
+			margin-bottom: 1.5em;
+			font-weight: 200;
+			.small {
+				font-size: 60%;
+				display: block;
+			}
+		}
+		.modal-title {
+			text-align: center;
+			font-size: 140%;
+			margin: 0;
+			font-weight: 600;
+		}
+		.modalpop-header {
+			padding: 20px 60px 0;
+			margin-bottom: $padding-base-horizontal;
+		}
+		.heading {
+			margin: 0;
+			// margin-bottom: 20px;
+			text-align: center;
+			.header {
+				font-weight: 600;
+				font-size: 130%;
+			}
+		}
+		.modalpop-body {
+			padding: 10px 40px;
+		}
+		.sucess-body {
+			color: $brand-success;
+			padding: 50px 3px;
+		}
+		.forgot {
+			text-align: right;
+			font-size: 90%;
+			margin-top: 5px;
+			a:hover {
+				color: $brand-info;
+				text-decoration: none;
+			}
+		}
+		.form-actions {
+			border-top: 1px solid $default-border;
+			padding-top: 1em;
+			margin-top: 2em;
+		}
+		.new-account {
+			padding-top: 1em;
+			a {
+				cursor: pointer;
+			}
+		}
+		.register {
+			min-width: 140px;
+		}
+
+		.modalpop-footer {
+			text-align: center;
+			padding: $padding-base-horizontal;
+		}
+		.info-footer {
+			color: $brand-secondary;
+			font-size: 90%;
+			border-top: 1px solid $default-border;
+			padding: 10px 60px;
+			.info-footer-item {
+				margin-bottom: 10px;
+			}
+		}
+		.footer-link {
+			margin-top: $padding-base-vertical;
+		}
+
+		@media (max-width: $screen-xs-min) {
+			border-radius: $border-radius-base;
+
+			.modalpop-header {
+				padding: 15px 0 0;
+			}
+			.modalpop-body {
+				padding: 10px 20px;
+			}
+		}
+	}
+}
+
+// Close icon
+.remove {
+	@include tab-focus;
+	border: 1px solid rgba($gray, 0.5);
+	border-radius: $border-radius-full;
+	width: 32px;
+	height: 32px;
+	z-index: 20;
+	color: $brand-gray;
+	background: $brand-white;
+	position: absolute;
+	top: $padding-base-horizontal;
+	right: $padding-base-horizontal;
+	&:hover {
+		color: $brand-danger;
+		border-color: $brand-danger;
+	}
+	@media (max-width: $screen-xs-min) {
+		border: none;
+		//border-radius: 0;
+		top: $padding-base-horizontal/3;
+		right: $padding-base-horizontal/3;
+	}
+}
+
+.head-content {
+	border-bottom: 1px solid $default-border;
+	margin-bottom: $padding-base-horizontal * 2;
+	padding-bottom: $padding-base-horizontal;
+
+	.pop-heading {
+		margin: 0;
+		padding: 0;
+		font-weight: 400;
+	}
+
+	.pop-content {
+	}
+
+	.btn {
+		.fa {
+		}
+	}
+}
+
+.heading-list {
+	@include clearfix;
+	margin-top: $padding-base-horizontal;
+	.header-link {
+		margin: 0;
+		padding: 0;
+		float: left;
+		li {
+			list-style: none;
+			float: left;
+			margin-right: $padding-base-horizontal * 2;
+			.text {
+				font-weight: 500;
+				// margin-right: $padding-base-vertical;
+				color: $gray;
+			}
+
+			.text-abt {
+				font-weight: 500;
+			}
+		}
+	}
+}
+.pricing-section {
+	min-height: 200px;
+}

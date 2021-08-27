@@ -1,0 +1,11 @@
+//
+//
+// validate form
+// --------------------------------------------------
+.nodisplay {
+      display: none;
+      &.active {
+            display: block;
+            //color: transparent
+      }
+}

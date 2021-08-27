@@ -1,0 +1,35 @@
+.modal-content {
+	border: 0;
+	@include z-depth-large;
+	border-radius: $border-radius-large + 6;
+}
+
+.modal-jumbotron {
+	padding: $padding-base-horizontal $padding-base-vertical;
+	margin: 0;
+	h1 {
+		font-size: 300%;
+	}
+}
+
+.modal-dialog.dialog-full {
+	margin: 0 auto;
+	width: auto;
+	border-radius: 0;
+
+	.modalpop-forms {
+		//@include z-depth-large;
+		background-color: $brand-white;
+		border-radius: 0;
+	}
+}
+
+.modal-footer {
+	@include clearfix;
+	// .add-rooms{
+	// 	float: right;
+	// }
+	// .add-rooms{
+	// 	float: right;
+	// }
+}

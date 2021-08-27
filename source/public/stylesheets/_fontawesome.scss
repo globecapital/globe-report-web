@@ -1,0 +1,29 @@
+/*!
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+
+// Core variables and mixins
+@import 'fontawesome/variables';
+@import 'fontawesome/mixins';
+
+$fa-font-path: "../fonts/fontawesome" !default;
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/regular';
+@import 'fontawesome/solid';
+@import 'fontawesome/v4-shims';
+@import 'fontawesome/animated';
+@import 'fontawesome/bordered-pulled';
+@import 'fontawesome/core';
+@import 'fontawesome/fixed-width';
+@import 'fontawesome/icons';
+@import 'fontawesome/larger';
+@import 'fontawesome/list';
+@import 'fontawesome/mixins';
+@import 'fontawesome/rotated-flipped';
+@import 'fontawesome/screen-reader';
+@import 'fontawesome/shims';
+@import 'fontawesome/stacked';
+@import 'fontawesome/variables';
+@import 'fontawesome/brands';

@@ -66,9 +66,10 @@
           <ul class="dropdown-menu">
             <li><a href="index.html">Ledger Report</a></li>
             <li><a href="holdings-report.html">Holdings Report</a></li>
-            <li><a href="mtf-holdings-report.html">MTF Holding</a></li>
+            <!-- <li><a href="mtf-holdings-report.html">MTF Holding</a></li> -->
             <li><a href="profit-and-loss.html">P&L Report</a></li>
             <li><a href="transaction-roport.html">Transaction Report</a></li>
+            <li><a href="download-roport.html">Download Report</a></li>
           </ul>
         </li>
         <!-- <li class="icons-text"><a href="#"><span class="fa fa-search icons"></span></a></li> -->
@@ -127,14 +128,17 @@
     <div class="categories-artical with-bg">
         <div class="btn-header">
             <ul class="btn-header-link">
-                <li class=""><a href="#"><span class="fa fa-download icons"></span> <span
-                            class="text">Download</span></a></li>
-                <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
-                            class="text">Email</span></a></li>
+                <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
+                            class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
+                            class="text">PDF</span></a></li>
+                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                                class="text">Email</span></a></li>
             </ul>
         </div>
+        
         <div class="dt-table-responsive">
-            <table id="holdingstable" class="table  table-symbols text-right">
+            <table id="holdingstable" class="table  table-symbols text-right" width="100%">
                 <thead>
                     <tr>
                         <th width="30%" class="with-icon">Symbol </th>
@@ -736,23 +740,6 @@
 
     $('.pages').css({
       minHeight: windowsHeight - (navbarHeight + footerHeight),
-    });
-  });
-
-  $('.switch-label').each(function () {
-    var $toggle = $(this);
-    var originalText = $toggle.find('.text').text();
-    var secondaryText = $toggle.data('toggle-text');
-    var $target = $($toggle.find('input[type="checkbox"]'));
-    // 
-    $target.on('change', function () {
-      if ($toggle.find('.text').text() == originalText) {
-        $toggle.find('.text').text(secondaryText);
-        $toggle.find('.lever').addClass('active');
-      } else {
-        $toggle.find('.text').text(originalText);
-        $toggle.find('.lever').removeClass('active');
-      }
     });
   });
 

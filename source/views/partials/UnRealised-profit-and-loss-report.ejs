@@ -1,0 +1,141 @@
+<div class="container">
+    <div class="form-page">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <select name="" class="form-control" id="">
+                                <option value="">Equity</option>
+                                <option value="">Derivative</option>
+                                <option value="">Commodity</option>
+                                <option value="">Currency</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <select name="" class="form-control" id="">
+                                <option value="">Realised P&L</option>
+                                <option value="">UnRealised P&L</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <select name="" class="form-control" id="">
+                                <option value="">04/03/2021 - 04/05/2021</option>
+                                <option value="">04/03/2021 - 04/05/2021</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="input-icon input-icon-right">
+                            <i class="fa fa-search icons"></i>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <div class="form-group">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="categories-artical with-bg">
+        <div class="btn-header">
+            <ul class="btn-header-link">
+                <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
+                            class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
+                            class="text">PDF</span></a></li>
+                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                                class="text">Email</span></a></li>
+            </ul>
+        </div>
+        <div class="dt-table-responsive">
+            <table class="table  table-symbols text-right">
+                <thead>
+                    <tr>
+                        <th width="30%" class="with-icon">Symbol <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">QTY <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">Buy Avg <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">Buy Value <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">Prev Close <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">Market Val <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">P&L <i class="fa fa-chevron-down icon"></i></th>
+                        <th class="with-icon text-right">P&L Chg <i class="fa fa-chevron-down icon"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var j=0; j < 10; j++) { %>
+                    <tr>
+                        <td class="text-left">
+                            <a href="dashboard.html" class="bold text-gray"><span>
+                                    <% if (j % 2 ) { %>
+                                    WIPRO
+                                    <%} else if (j % 3) { %>
+                                    TATAMOTORS
+                                    <%} else { %>
+                                    TIINDIA
+                                    <% } %>
+                                </span>
+                            </a>
+                        </td>
+                        <td>1000<%= j*3 %></td>
+                        <td><%= j+1*3 %>31.79</td>
+                        <td><%= j+2*3 %>31.79</td>
+                        <td>1<%= j+1*3 %>0</td>
+                        <td><%= j+1*3 %>00</td>
+                        <td class="bg-gray"> <% if (j % 2 ) { %>
+                            <span class="text-danger"><%= j+1*3 %>0<%= j+1*3 %></span>
+                            <%} else { %>
+                            <span class="text-success"><%= j+1*3 %>0<%= j+1*3 %></span>
+                            <% } %>
+                        </td>
+                        <td> <% if (j % 2 ) { %>
+                            <span class="text-danger">+<%= j+1*4 %>.<%= j+1*8 %>%</span>
+                            <%} else { %>
+                            <span class="text-success">+<%= j+1*4 %>.<%= j+1*8 %>%</span>
+                            <% } %>
+                            <div class="dropdown dropdown-table">
+                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v icons-caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="#">View Trades</a></li>
+                                    <li><a href="#">Pledge for margin</a></li>
+                                    <li><a href="#">Cancel Pledge Request</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-pagination text-center">
+            <ul class="pagination pagination-sm">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <i class="fa fa-chevron-left icon"></i>
+                    </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <i class="fa fa-chevron-right icon"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

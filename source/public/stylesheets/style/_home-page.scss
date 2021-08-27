@@ -1,0 +1,61 @@
+//
+// Home page
+// --------------------------------------------------
+.section-header {
+	border-bottom: 1px solid $default-border;
+	padding: $padding-base-horizontal + $padding-base-vertical 0;
+	// margin-top: $padding-base-horizontal * 3;
+	margin-bottom: $padding-base-horizontal;
+	// padding-bottom: $padding-base-vertical * 3;
+	.header {
+		@include clearfix;
+		margin: 0;
+		padding: 0;
+		font-weight: 500;
+		small {
+			font-weight: 600;
+			font-size: 50%;
+		}
+	}
+	.text-heading {
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	.btn-header {
+		float: right;
+	}
+	.btn-header-link {
+		float: right;
+		margin: 0;
+		padding: 0;
+		padding-top: $padding-base-vertical + 6;
+		li {
+			float: left;
+			list-style: none;
+			font-size: 60%;
+			.text {
+				margin-left: $padding-base-vertical;
+				display: inline-block;
+				font-size: 90%;
+				vertical-align: top;
+				font-weight: 500;
+			}
+			a {
+				display: block;
+				padding: 0 $padding-base-vertical + 4;
+				color: $gray;
+				&:hover {
+					color: $link-color;
+				}
+			}
+		}
+	}
+}
+
+.bold {
+	font-weight: 600;
+}
+.bold {
+	font-weight: 600;
+}

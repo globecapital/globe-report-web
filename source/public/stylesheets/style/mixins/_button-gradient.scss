@@ -1,0 +1,52 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+//@mixin button-borderd-variant($border, $background, $border) {
+@mixin button-gradient-variant($color, $start-background, $end-background, $border) {
+  color: $color;
+  @include gradient-horizontal($start-color: $start-background, $end-color: $end-background);
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    @include gradient-horizontal($start-color: darken($start-background, 10%), $end-color: darken($end-background, 10%));
+    border-color: darken($border, 25%);
+  }
+
+  &:hover {
+    color: $color;
+    @include gradient-horizontal($start-color: darken($start-background, 10%), $end-color: darken($end-background, 10%));
+    border-color: darken($border, 12%);
+  }
+
+  &:active,
+  &.active,
+  .open>&.dropdown-toggle {
+    color: $color;
+    @include gradient-horizontal($start-color: darken($start-background, 10%), $end-color: darken($end-background, 10%));
+    background-image: none;
+    border-color: darken($border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      @include gradient-horizontal($start-color: darken($start-background, 10%), $end-color: darken($end-background, 10%));
+      border-color: darken($border, 25%);
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+
+    &:hover,
+    &:focus,
+    &.focus {
+      @include gradient-horizontal($start-color: lighten($start-background, 10%), $end-color: lighten($end-background, 10%));
+      border-color: $border;
+    }
+  }
+}

@@ -1,0 +1,172 @@
+//
+// booking card form
+// --------------------------------------------------
+.btn {
+	border: none;
+	@include transition(0.15s ease-out);
+	border-radius: $border-radius-base;
+
+	&.round {
+		border-radius: $border-radius-half;
+	}
+
+	&.prefix {
+		position: relative;
+		padding-left: 42px;
+
+		.fa,
+		.fas,
+		.far,
+		.fal,
+		.fab,
+		.ich {
+			position: absolute;
+			top: 50%;
+			margin-top: -0.5em;
+			left: 1.4em;
+		}
+
+		// [converter] extracted a& to a.btn
+	}
+
+	&.hoverable:hover,
+	&.hoverable:focus,
+	&.hoverable.focus {
+		text-decoration: none;
+		@include z-depth-4;
+	}
+
+	&.btn-minwidth {
+		width: 220px;
+		margin: 0 auto;
+		display: block;
+	}
+	&.btn-min-width {
+		min-width: 160px;
+	}
+	&.confirm {
+		min-width: 160px;
+	}
+	&.dropdown-toggle {
+		@include tab-focus;
+	}
+}
+
+// .btn {
+//     @include transition( 0.2s ease-out);
+//   }
+// Danger and error appear as red
+.btn-pink {
+	@include button-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
+}
+
+// Danger and error appear as red
+.btn-inverse {
+	@include button-variant(
+		$btn-inverse-color,
+		$btn-inverse-bg,
+		$btn-inverse-border
+	);
+}
+
+// Danger and error appear as red
+.btn-gray {
+	@include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+}
+
+.btn-white {
+	@include button-variant(
+		$btn-borderd-color,
+		$btn-borderd-bg,
+		$btn-default-border
+	);
+}
+
+.btn-theme {
+	@include button-variant($btn-theme-color, $btn-theme-bg, $btn-theme-border);
+}
+ 
+.btn-secondary {
+	@include button-variant(
+		$btn-secondary-color,
+		$btn-secondary-bg,
+		$btn-secondary-border
+	);
+}
+
+
+.btn-other {
+	@include button-variant($btn-other-color, $btn-other-bg, $btn-other-border);
+}
+
+.btn-border {
+	border: 2px solid $default-border;
+	@include button-size(
+		$padding-base-vertical,
+		$padding-base-horizontal + (-6),
+		$font-size-base,
+		$line-height-base,
+		$btn-border-radius-base
+	);
+	@include button-variant($gray, $brand-white, $default-border);
+}
+
+//
+@include bg-variant('.bg-primary', $brand-primary);
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);
+
+// Scale up the modal
+@media (min-width: $screen-sm-min) {
+	.modal-xs {
+		width: $modal-xs;
+	}
+}
+
+//
+@include bg-variant('.bg-primary', $brand-primary);
+@include bg-variant('.bg-gray', $brand-alernative);
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);
+
+@include bg-variant('.bg-deep-orange', $brand-deep-orange);
+@include bg-variant('.bg-yellow', $brand-yellow);
+@include bg-variant('.bg-white', $brand-white);
+@include bg-variant('.bg-light-red', $brand-light-red);
+@include bg-variant('.bg-pink', $brand-pink);
+@include bg-variant('.bg-gray', $brand-gray);
+@include bg-variant('.bg-violet', $brand-violet);
+@include bg-variant('.bg-blue', $brand-blue);
+@include bg-variant('.bg-blue-grey', $brand-blue-gray);
+@include bg-variant('.bg-brown', $brand-brown);
+@include bg-variant('.bg-green', $brand-green);
+@include bg-variant('.bg-lime', $brand-lime);
+@include bg-variant('.bg-light-blue', $brand-light-blue);
+@include bg-variant('.bg-cyan', $brand-cyan);
+@include bg-variant('.bg-teal', $brand-teal);
+@include bg-variant('.bg-purple', $brand-purple);
+@include bg-variant('.bg-indigo', $brand-indigo);
+@include bg-variant('.bg-orange', $brand-orange);
+@include bg-variant('.bg-maroon', $brand-maroon);
+@include bg-variant('.bg-default', $brand-default);
+@include bg-variant('.bg-secondary', $brand-secondary);
+@include bg-variant('.bg-alernative', $brand-alernative);
+@include bg-variant('.bg-ico-color', $brand-ico-color);
+@include bg-variant('.bg-other', $brand-other);
+
+.bootstrap-select {
+	> select.mobile-device:focus + .dropdown-toggle,
+	.dropdown-toggle {
+		@include tab-focus;
+		&:focus {
+			@include tab-focus;
+		}
+		&.btn-xs {
+			padding-right: $padding-base-horizontal;
+		}
+	}
+}
