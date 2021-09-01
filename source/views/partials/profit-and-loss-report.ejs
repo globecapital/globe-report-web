@@ -1,6 +1,6 @@
 <div class="container">
     <div class="form-page clearfix">
-        <div class="row pull-left">
+        <div class="row">
             <div class="col-sm-5">
                 <div class="row">
                     <div class="col-sm-4">
@@ -14,7 +14,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-6">
                         <div class="form-group">
                             <label for="segmentYear" class="control-label">P&L</label>
                             <select name="" class="form-control control-inputs" id=""> 
@@ -25,7 +25,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-6">
                         <div class="form-group disabled-inputs show-equity contract-equity">
                             <label for="segmentYear" class="control-label">financial year</label>
                             <select name="" class="form-control" id="segmentYear" disabled>
@@ -47,7 +47,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group disabled-inputs">
                             <label for="toDate" class="control-label">From Date</label>
                             <div class="input-icon input-icon-right">
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group disabled-inputs">
                             <label for="toDate" class="control-label">TO Date</label>
                             <div class="input-icon input-icon-right">
@@ -72,9 +72,9 @@
                     <label for="segmentYear" class="control-label">Search</label>
                     <div class="input-icon input-icon-right">
                         <i class="fa fa-search icons"></i>
-                        <input type="text" class="form-control search-input" data-columns="2" placeholder="Search">
+                        <input type="text" class="form-control search-input" data-columns="1" placeholder="Search">
                     </div>
-                </div>
+                </div> 
             </div>
             <div class="col-sm-1">
                 <div class="form-group with-btn">
@@ -124,7 +124,7 @@
                     <% for(var j=0; j < 10; j++) { %>
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     <% if (j % 2 ) { %>
                                     WIPRO
                                     <%} else if (j % 3) { %>
@@ -133,7 +133,7 @@
                                     TIINDIA
                                     <% } %>
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>1000<%= j*3 %></td>
                         <td><%= j+1*3 %>31.79</td>

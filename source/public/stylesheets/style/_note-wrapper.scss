@@ -90,8 +90,11 @@
 .account-wrapper-outer {
 	//min-height: 400px;
 	// border: 1px solid $default-border;
+	background-color: lighten($brand-blue-gray, 50%);
 	border-radius: $border-radius-base;
-	padding: $padding-base-horizontal * 2;
+	padding: $padding-base-horizontal * 1.5 $padding-base-horizontal * 2;
+	margin-bottom: $padding-base-horizontal * 3;
+
 	.heading {
 		font-size: 180%;
 		font-weight: 500;
@@ -125,20 +128,20 @@
 	}
 	.price-card {
 		margin-bottom: $padding-base-horizontal;
-			display: block;
-			.price-heading {
-				position: relative;
-				.icons {
-					position: absolute;
-					top: $padding-base-vertical;
-					font-size: 60%;
-					left: -($padding-base-horizontal + $padding-base-vertical);
-				}
+		display: block;
+		.price-heading {
+			position: relative;
+			.icons {
+				position: absolute;
+				top: $padding-base-vertical;
+				font-size: 60%;
+				left: -($padding-base-horizontal + $padding-base-vertical);
 			}
-			.new-price {
-				font-weight: 400;
-				font-size: 220%;
-			}
+		}
+		.new-price {
+			font-weight: 400;
+			font-size: 230%;
+		}
 	}
 	.person {
 		font-size: 80%;
@@ -275,25 +278,27 @@
 
 .icon-cards {
 	position: relative;
-	//border: 1px solid $default-border;
-	padding: $padding-base-horizontal*2;
-	margin: $padding-base-horizontal*2 auto;
-	padding-left: $icons-avator + $padding-base-horizontal*3;
-	// &:after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	background-color: $brand-primary;
-	// 	top: $padding-base-horizontal;
-	// 	bottom: 0;
-	// 	height: $icons-avator *.25;
-	// 	left: 0;
-	// 	width: 3px;
-	// }
-	.icons {
+	// border: 2px solid transparent;
+	padding: $padding-base-horizontal * 2;
+	padding-bottom: $padding-base-horizontal;
+	margin: $padding-base-horizontal * 2 auto;
+	padding-left: $icons-avator + $padding-base-horizontal * 2;
+	&:after {
+		content: '';
+		position: absolute;
+		background-color: $brand-primary;
+		// top: $padding-base-horizontal;
+		bottom: 0;
+		height: 2px;
+		left: $icons-avator + $padding-base-horizontal * 2;
+		width: 0;
+		@include transition(all 0.2s ease-in-out);
+	}
+	.img-icons {
 		width: $icons-avator;
 		height: $icons-avator;
 		position: absolute;
-		top: $icons-avator *.25; 
+		top: $icons-avator * 0.15;
 		left: 0;
 		z-index: 3;
 		img {
@@ -306,9 +311,37 @@
 		.tittle {
 			font-size: 160%;
 			font-weight: 700;
+			margin-bottom: $padding-base-vertical;
 		}
-
+	}
+	.sub-header {
+		a {
+			color: $gray;
+			.icons {
+				padding-left: 0;
+				@include transition(padding 0.3s ease-in-out);
+			}
+		}
+	}
+	&.active {
+		&:after {
+			@include transition(all 0.3s ease-in-out);
+			width: $icons-avator;
+		}
+		border-color: $default-border;
 		.sub-header {
+			a {
+				color: $brand-default;
+				.icons {
+					padding-left: $padding-base-horizontal ;
+				}
+			}
 		}
 	}
 }
+
+// .marketinfo-block {
+// 	&.with-bg {
+// 		background-color: $default-border;
+// 	}
+// }

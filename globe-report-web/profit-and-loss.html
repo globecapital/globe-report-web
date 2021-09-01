@@ -72,27 +72,7 @@
             <li><a href="download-roport.html">Download Report</a></li>
           </ul>
         </li>
-        <!-- <li class="icons-text"><a href="#"><span class="fa fa-search icons"></span></a></li> -->
-        <!-- <li class="icons-text"><a href="#"><span class="fa fa-user-circle icons"></span></a></li> -->
-        <!-- <li class="dropdown icons-text">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false"><span class="fa fa-user-circle icons"></span> <span
-              class="fa fa-angle-down icons-caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
       </ul>
-      <!-- <div class="navbar-btn">
-        <button type="button" class="btn-borderd btn-borderd-theme btn-borderd-sm hoverable" data-toggle="modal"
-          data-target="#postGetquote">Create Profile</button>
-        <button type="button" class="btn-borderd btn-borderd-theme btn-borderd-sm hoverable" data-toggle="modal"
-          data-target="#postGetquote">Create Group</button>
-      </div> -->
     </div>
   </div>
 </div>
@@ -101,10 +81,9 @@
   <ul class="sidebar-navigation">
     <li><a href="index.html">Ledger Report</a></li>
     <li><a href="holdings-report.html">Holdings Report</a></li>
-    <li><a href="realised-profit-and-loss.html">Realised P&L</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">UnRealised P&L</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">Search</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">Profile</a></li>
+    <li><a href="profit-and-loss.html">P&L Report</a></li>
+    <li><a href="transaction-roport.html">Transaction Report</a></li>
+    <li><a href="download-roport.html">Download Report</a></li>
   </ul>
 </div>
 
@@ -118,22 +97,22 @@
             </div>
             <div class="invested-block">
                 <ul class="header-link row">
-                    <li class="col-sm-3"><span class="price-card">
+                    <li class="col-sm-3 col-xs-6"><span class="price-card">
                             <div class="price-heading">Invested Value</div>
                             <span class="new-price"> <i class="fa fa-rupee-sign icon"></i> <span
                                     class="price">3,999</span><span class="percent">(-4.01%)</span></span>
                         </span></li>
-                    <li class="col-sm-3"><span class="price-card">
+                    <li class="col-sm-3 col-xs-6"><span class="price-card">
                             <div class="price-heading">Current Value</div>
                             <span class="new-price"> <i class="fa fa-rupee-sign icon"></i> <span
                                     class="price">3,999</span><span class="percent">(-4.01%)</span></span>
                         </span></li>
-                    <li class="col-sm-3"><span class="price-card">
+                    <li class="col-sm-3 col-xs-6"><span class="price-card">
                             <div class="price-heading">Overall Rutrns</div>
                             <span class="new-price text-danger"> <i class="fa fa-rupee-sign icon"></i> <span
                                     class="price">-3,999</span><span class="percent">(-4.01%)</span></span>
                         </span></li>
-                        <li class="col-sm-3"><span class="price-card">
+                        <li class="col-sm-3 col-xs-6"><span class="price-card">
                             <div class="price-heading">Todays Rutrns</div>
                             <span class="new-price"> <i class="fa fa-rupee-sign icon"></i> <span
                                 class="price">3,999</span><span class="percent">(-4.01%)</span></span>
@@ -143,7 +122,7 @@
         </div>
         <div class="container">
     <div class="form-page clearfix">
-        <div class="row pull-left">
+        <div class="row">
             <div class="col-sm-5">
                 <div class="row">
                     <div class="col-sm-4">
@@ -157,7 +136,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-6">
                         <div class="form-group">
                             <label for="segmentYear" class="control-label">P&L</label>
                             <select name="" class="form-control control-inputs" id=""> 
@@ -168,7 +147,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-xs-6">
                         <div class="form-group disabled-inputs show-equity contract-equity">
                             <label for="segmentYear" class="control-label">financial year</label>
                             <select name="" class="form-control" id="segmentYear" disabled>
@@ -218,7 +197,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group disabled-inputs">
                             <label for="toDate" class="control-label">From Date</label>
                             <div class="input-icon input-icon-right">
@@ -227,7 +206,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group disabled-inputs">
                             <label for="toDate" class="control-label">TO Date</label>
                             <div class="input-icon input-icon-right">
@@ -243,9 +222,9 @@
                     <label for="segmentYear" class="control-label">Search</label>
                     <div class="input-icon input-icon-right">
                         <i class="fa fa-search icons"></i>
-                        <input type="text" class="form-control search-input" data-columns="2" placeholder="Search">
+                        <input type="text" class="form-control search-input" data-columns="1" placeholder="Search">
                     </div>
-                </div>
+                </div> 
             </div>
             <div class="col-sm-1">
                 <div class="form-group with-btn">
@@ -295,12 +274,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     TIINDIA
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>10000</td>
                         <td>331.79</td>
@@ -316,12 +295,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>10003</td>
                         <td>431.79</td>
@@ -337,12 +316,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     TATAMOTORS
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>10006</td>
                         <td>531.79</td>
@@ -358,12 +337,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>10009</td>
                         <td>631.79</td>
@@ -379,12 +358,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     TATAMOTORS
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>100012</td>
                         <td>731.79</td>
@@ -400,12 +379,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>100015</td>
                         <td>831.79</td>
@@ -421,12 +400,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     TIINDIA
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>100018</td>
                         <td>931.79</td>
@@ -442,12 +421,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>100021</td>
                         <td>1031.79</td>
@@ -463,12 +442,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     TATAMOTORS
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>100024</td>
                         <td>1131.79</td>
@@ -484,12 +463,12 @@
                     
                     <tr>
                         <td class="text-left">
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div  class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>100027</td>
                         <td>1231.79</td>
@@ -615,9 +594,19 @@
     });
   });
 
-
-
-
+  $('.icon-cards').each(function () {
+    let iconCardsWrapper = $(this);
+    var btnLink = iconCardsWrapper.find('.sub-header');
+    btnLink.on("click hover mouseenter",'a', function () {
+      iconCardsWrapper.removeClass('active');
+      var $thisLink = $(this);
+      var controlPerent = $thisLink.parents(iconCardsWrapper);
+      controlPerent.find('.active').removeClass('active');
+      $thisLink.parent().addClass('active');
+      iconCardsWrapper.addClass('active');
+    });
+  });
+  
   // $.extend(true, $.fn.dataTable.defaults, {
   //     sDom: "i",
   //     sPaginationType: 'bootstrap',
@@ -644,9 +633,7 @@
     var windowsHeight = $(window).height();
     var navbarHeight = $('.siteNavbar').outerHeight();
     var footerHeight = $('.page-footer').outerHeight();
-
     // console.log(windowsHeight, navbarHeight, footerHeight);
-
     $('.pages').css({
       minHeight: windowsHeight - (navbarHeight + footerHeight),
     });
@@ -716,6 +703,7 @@
     </table>`
     );
   });
+
   $('#viewTradesPop').on('hidden.bs.modal', function (e) {
     $('.head-content').html('');
     $('.pricing-section').html('');

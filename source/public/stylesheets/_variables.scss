@@ -437,7 +437,7 @@ $navbar-padding-vertical: (
 $navbar-collapse-max-height: 340px !default; 
 
 $navbar-default-color: $brand-alernative !default;
-$navbar-default-bg: darken($brand-white, 5%) !default;
+$navbar-default-bg: $brand-white !default;
 $navbar-default-border: transparent !default;
 
 // Navbar links

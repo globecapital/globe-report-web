@@ -72,27 +72,7 @@
             <li><a href="download-roport.html">Download Report</a></li>
           </ul>
         </li>
-        <!-- <li class="icons-text"><a href="#"><span class="fa fa-search icons"></span></a></li> -->
-        <!-- <li class="icons-text"><a href="#"><span class="fa fa-user-circle icons"></span></a></li> -->
-        <!-- <li class="dropdown icons-text">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false"><span class="fa fa-user-circle icons"></span> <span
-              class="fa fa-angle-down icons-caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
       </ul>
-      <!-- <div class="navbar-btn">
-        <button type="button" class="btn-borderd btn-borderd-theme btn-borderd-sm hoverable" data-toggle="modal"
-          data-target="#postGetquote">Create Profile</button>
-        <button type="button" class="btn-borderd btn-borderd-theme btn-borderd-sm hoverable" data-toggle="modal"
-          data-target="#postGetquote">Create Group</button>
-      </div> -->
     </div>
   </div>
 </div>
@@ -101,10 +81,9 @@
   <ul class="sidebar-navigation">
     <li><a href="index.html">Ledger Report</a></li>
     <li><a href="holdings-report.html">Holdings Report</a></li>
-    <li><a href="realised-profit-and-loss.html">Realised P&L</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">UnRealised P&L</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">Search</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">Profile</a></li>
+    <li><a href="profit-and-loss.html">P&L Report</a></li>
+    <li><a href="transaction-roport.html">Transaction Report</a></li>
+    <li><a href="download-roport.html">Download Report</a></li>
   </ul>
 </div>
 
@@ -126,17 +105,17 @@
 
             <div class="invested-block">
                 <ul class="header-link row">
-                    <li class="col-sm-4"><span class="price-card">
+                    <li class="col-sm-4 col-xs-6"><span class="price-card">
                             <div class="price-heading">Invested Value</div>
                             <span class="new-price"> <i class="fa fa-rupee-sign icon"></i> <span
                                     class="price">3,999</span><span class="percent">(-4.01%)</span></span>
                         </span></li>
-                    <li class="col-sm-4"><span class="price-card">
+                    <li class="col-sm-4 col-xs-6"><span class="price-card">
                             <div class="price-heading">Market Value</div>
                             <span class="new-price"> <i class="fa fa-rupee-sign icon"></i> <span
                                     class="price">3,999</span><span class="percent">(-4.01%)</span></span>
                         </span></li>
-                    <li class="col-sm-4"><span class="price-card">
+                    <li class="col-sm-4 col-xs-6"><span class="price-card">
                             <div class="price-heading">Unrealised P&L</div>
                             <span class="new-price text-danger"> <i class="fa fa-rupee-sign icon"></i> <span
                                     class="price">-3,999</span><span class="percent">(-4.01%)</span></span>
@@ -252,9 +231,19 @@
     });
   });
 
-
-
-
+  $('.icon-cards').each(function () {
+    let iconCardsWrapper = $(this);
+    var btnLink = iconCardsWrapper.find('.sub-header');
+    btnLink.on("click hover mouseenter",'a', function () {
+      iconCardsWrapper.removeClass('active');
+      var $thisLink = $(this);
+      var controlPerent = $thisLink.parents(iconCardsWrapper);
+      controlPerent.find('.active').removeClass('active');
+      $thisLink.parent().addClass('active');
+      iconCardsWrapper.addClass('active');
+    });
+  });
+  
   // $.extend(true, $.fn.dataTable.defaults, {
   //     sDom: "i",
   //     sPaginationType: 'bootstrap',
@@ -281,9 +270,7 @@
     var windowsHeight = $(window).height();
     var navbarHeight = $('.siteNavbar').outerHeight();
     var footerHeight = $('.page-footer').outerHeight();
-
     // console.log(windowsHeight, navbarHeight, footerHeight);
-
     $('.pages').css({
       minHeight: windowsHeight - (navbarHeight + footerHeight),
     });
@@ -353,6 +340,7 @@
     </table>`
     );
   });
+
   $('#viewTradesPop').on('hidden.bs.modal', function (e) {
     $('.head-content').html('');
     $('.pricing-section').html('');

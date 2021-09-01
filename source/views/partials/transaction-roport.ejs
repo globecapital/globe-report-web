@@ -1,18 +1,19 @@
 <div class="container">
     <div class="form-page clearfix">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-xs-6">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Segment</label>
                     <select name="" class="form-control control-inputs" id="">
-                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity</option>
+                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity
+                        </option>
                         <option value="" data-value="disabled-equity" data-disabled="false">Derivative</option>
                         <option value="" data-value="disabled-equity" data-disabled="false">Commodity</option>
                         <option value="" data-value="disabled-equity" data-disabled="false">Currency</option>
                     </select>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-xs-6">
                 <div class="form-group disabled-equity">
                     <label for="segmentYear" class="control-label">Select Year</label>
                     <select name="" class="form-control " disabled id="segmentYear">
@@ -23,9 +24,9 @@
                 </div>
             </div>
 
-            <div class="col-sm-5">
+            <div class="col-sm-5 col-xs-12">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group">
                             <label for="toDate" class="control-label">From Date</label>
                             <div class="input-icon input-icon-right">
@@ -34,7 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group">
                             <label for="toDate" class="control-label">TO Date</label>
                             <div class="input-icon input-icon-right">
@@ -45,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-xs-12">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Search</label>
                     <div class="input-icon input-icon-right">
@@ -54,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-1">
+            <div class="col-sm-1 col-xs-12">
                 <div class="form-group with-btn">
                     <button class="btn btn-theme hoverable waves-effect btn-block waves-light">Submit</button>
                 </div>
@@ -101,7 +102,7 @@
                     <tr>
                         <td>1<%= j*3 %> Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     <% if (j % 2 ) { %>
                                     WIPRO
                                     <%} else if (j % 3) { %>
@@ -110,7 +111,7 @@
                                     TIINDIA
                                     <% } %>
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             <% if (j % 2 ) { %>

@@ -209,6 +209,12 @@
 		margin-left: $padding-base-vertical;
 		font-size: 60%;
 	}
+	@media (max-width: $screen-sm-min) {
+		.percent {
+			display: block;  
+			font-size: 50%;
+		}
+	}
 }
 
 .categories-artical {

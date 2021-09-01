@@ -1,8 +1,8 @@
 # Node gitignore -----
 node_modules/
 .sass-cache/
-# source/
-gulp-env/
+source/
+gulp-env/ 
 zip/globe-report-web-source-V1.0.0/
 
 **/*.log
@@ -36,9 +36,6 @@ tmp/**/*
 
 # files for the dex VM
 *.dex
-
-# Java class files
-*.class
 
 # generated files - android project subfolder
 Android/bin/

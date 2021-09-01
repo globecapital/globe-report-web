@@ -72,27 +72,7 @@
             <li><a href="download-roport.html">Download Report</a></li>
           </ul>
         </li>
-        <!-- <li class="icons-text"><a href="#"><span class="fa fa-search icons"></span></a></li> -->
-        <!-- <li class="icons-text"><a href="#"><span class="fa fa-user-circle icons"></span></a></li> -->
-        <!-- <li class="dropdown icons-text">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false"><span class="fa fa-user-circle icons"></span> <span
-              class="fa fa-angle-down icons-caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
       </ul>
-      <!-- <div class="navbar-btn">
-        <button type="button" class="btn-borderd btn-borderd-theme btn-borderd-sm hoverable" data-toggle="modal"
-          data-target="#postGetquote">Create Profile</button>
-        <button type="button" class="btn-borderd btn-borderd-theme btn-borderd-sm hoverable" data-toggle="modal"
-          data-target="#postGetquote">Create Group</button>
-      </div> -->
     </div>
   </div>
 </div>
@@ -101,10 +81,9 @@
   <ul class="sidebar-navigation">
     <li><a href="index.html">Ledger Report</a></li>
     <li><a href="holdings-report.html">Holdings Report</a></li>
-    <li><a href="realised-profit-and-loss.html">Realised P&L</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">UnRealised P&L</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">Search</a></li>
-    <li><a href="UnRealised-profit-and-loss.html">Profile</a></li>
+    <li><a href="profit-and-loss.html">P&L Report</a></li>
+    <li><a href="transaction-roport.html">Transaction Report</a></li>
+    <li><a href="download-roport.html">Download Report</a></li>
   </ul>
 </div>
 
@@ -127,18 +106,19 @@
         <div class="container">
     <div class="form-page clearfix">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-xs-6">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Segment</label>
                     <select name="" class="form-control control-inputs" id="">
-                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity</option>
+                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity
+                        </option>
                         <option value="" data-value="disabled-equity" data-disabled="false">Derivative</option>
                         <option value="" data-value="disabled-equity" data-disabled="false">Commodity</option>
                         <option value="" data-value="disabled-equity" data-disabled="false">Currency</option>
                     </select>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-xs-6">
                 <div class="form-group disabled-equity">
                     <label for="segmentYear" class="control-label">Select Year</label>
                     <select name="" class="form-control " disabled id="segmentYear">
@@ -163,9 +143,9 @@
                 </div>
             </div>
 
-            <div class="col-sm-5">
+            <div class="col-sm-5 col-xs-12">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group">
                             <label for="toDate" class="control-label">From Date</label>
                             <div class="input-icon input-icon-right">
@@ -174,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="form-group">
                             <label for="toDate" class="control-label">TO Date</label>
                             <div class="input-icon input-icon-right">
@@ -185,7 +165,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2 col-xs-12">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Search</label>
                     <div class="input-icon input-icon-right">
@@ -194,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-1">
+            <div class="col-sm-1 col-xs-12">
                 <div class="form-group with-btn">
                     <button class="btn btn-theme hoverable waves-effect btn-block waves-light">Submit</button>
                 </div>
@@ -241,12 +221,12 @@
                     <tr>
                         <td>10 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     TIINDIA
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -274,12 +254,12 @@
                     <tr>
                         <td>13 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -305,12 +285,12 @@
                     <tr>
                         <td>16 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     TATAMOTORS
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -338,12 +318,12 @@
                     <tr>
                         <td>19 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -369,12 +349,12 @@
                     <tr>
                         <td>112 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     TATAMOTORS
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -402,12 +382,12 @@
                     <tr>
                         <td>115 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -433,12 +413,12 @@
                     <tr>
                         <td>118 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     TIINDIA
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -466,12 +446,12 @@
                     <tr>
                         <td>121 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -497,12 +477,12 @@
                     <tr>
                         <td>124 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     TATAMOTORS
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -530,12 +510,12 @@
                     <tr>
                         <td>127 Aug, 2021</td>
                         <td>
-                            <a href="dashboard.html" class="bold text-gray"><span>
+                            <div class="bold text-gray"><span>
                                     
                                     WIPRO
                                     
                                 </span>
-                            </a>
+                            </div>
                         </td>
                         <td>
                             
@@ -670,9 +650,19 @@
     });
   });
 
-
-
-
+  $('.icon-cards').each(function () {
+    let iconCardsWrapper = $(this);
+    var btnLink = iconCardsWrapper.find('.sub-header');
+    btnLink.on("click hover mouseenter",'a', function () {
+      iconCardsWrapper.removeClass('active');
+      var $thisLink = $(this);
+      var controlPerent = $thisLink.parents(iconCardsWrapper);
+      controlPerent.find('.active').removeClass('active');
+      $thisLink.parent().addClass('active');
+      iconCardsWrapper.addClass('active');
+    });
+  });
+  
   // $.extend(true, $.fn.dataTable.defaults, {
   //     sDom: "i",
   //     sPaginationType: 'bootstrap',
@@ -699,9 +689,7 @@
     var windowsHeight = $(window).height();
     var navbarHeight = $('.siteNavbar').outerHeight();
     var footerHeight = $('.page-footer').outerHeight();
-
     // console.log(windowsHeight, navbarHeight, footerHeight);
-
     $('.pages').css({
       minHeight: windowsHeight - (navbarHeight + footerHeight),
     });
@@ -771,6 +759,7 @@
     </table>`
     );
   });
+
   $('#viewTradesPop').on('hidden.bs.modal', function (e) {
     $('.head-content').html('');
     $('.pricing-section').html('');

@@ -44,6 +44,9 @@ label {
 
 	&.with-btn {
 		padding-top: $padding-base-horizontal*2;
+		@media (max-width: $screen-sm-min) {
+			padding-top: 0;
+		}
 	}
 
 	&.is-focused,

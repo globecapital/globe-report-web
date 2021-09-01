@@ -16,6 +16,12 @@
 			font-weight: 600;
 			font-size: 50%;
 		}
+		@media (max-width: $screen-sm-min) {
+			small {
+				display: block;
+				margin-top: $padding-base-vertical;
+			}
+		}
 	}
 	.text-heading {
 		float: left;
@@ -53,6 +59,7 @@
 	}
 	&.with-margin {
 		padding: $padding-base-horizontal * 4 0;
+		padding-bottom: $padding-base-horizontal * 3;
 	}
 }
 
