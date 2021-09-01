@@ -51,6 +51,9 @@
 			}
 		}
 	}
+	&.with-margin {
+		padding: $padding-base-horizontal * 4 0;
+	}
 }
 
 .bold {

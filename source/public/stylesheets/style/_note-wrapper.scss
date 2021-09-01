@@ -1,5 +1,5 @@
 .note-wrapper-outer {
-	min-height: 400px;
+	// min-height: 400px;
 	background-color: $default-border;
 	background: url('../images/note_dot.png') repeat-x;
 	border: 1px solid $default-border;
@@ -88,8 +88,8 @@
 }
 
 .account-wrapper-outer {
-	min-height: 400px;
-	border: 1px solid $default-border;
+	//min-height: 400px;
+	// border: 1px solid $default-border;
 	border-radius: $border-radius-base;
 	padding: $padding-base-horizontal * 2;
 	.heading {
@@ -124,8 +124,7 @@
 		margin-top: $padding-base-horizontal * 2;
 	}
 	.price-card {
-		&.sub-icons {
-			margin-bottom: $padding-base-horizontal * 2;
+		margin-bottom: $padding-base-horizontal;
 			display: block;
 			.price-heading {
 				position: relative;
@@ -138,8 +137,8 @@
 			}
 			.new-price {
 				font-weight: 400;
+				font-size: 220%;
 			}
-		}
 	}
 	.person {
 		font-size: 80%;
@@ -166,7 +165,7 @@
 }
 .download-wrapper-outer {
 	//min-height: 400px;
-	@include transition(all .2s ease-in-out);
+	@include transition(all 0.2s ease-in-out);
 	border: 1px solid $default-border;
 	border-radius: $border-radius-base;
 	padding: $padding-base-horizontal;
@@ -184,7 +183,7 @@
 		bottom: 1px;
 		right: 1px;
 		padding: $padding-base-horizontal $padding-base-vertical;
-		@include transition(all .2s ease-in-out);
+		@include transition(all 0.2s ease-in-out);
 		li {
 			list-style: none;
 			float: left;
@@ -206,6 +205,12 @@
 				}
 				&:hover {
 					color: $brand-primary;
+				}
+			}
+			&.active {
+				a {
+					color: $brand-primary;
+					border-color: $brand-primary;
 				}
 			}
 		}
@@ -249,7 +254,8 @@
 			}
 		}
 	}
-	&:hover {
+	&:hover,
+	&.active {
 		border-color: $brand-primary;
 		.btn-header-link {
 			@include opacity(1);
@@ -264,5 +270,45 @@
 	}
 	&.right {
 		float: right;
+	}
+}
+
+.icon-cards {
+	position: relative;
+	//border: 1px solid $default-border;
+	padding: $padding-base-horizontal*2;
+	margin: $padding-base-horizontal*2 auto;
+	padding-left: $icons-avator + $padding-base-horizontal*3;
+	// &:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	background-color: $brand-primary;
+	// 	top: $padding-base-horizontal;
+	// 	bottom: 0;
+	// 	height: $icons-avator *.25;
+	// 	left: 0;
+	// 	width: 3px;
+	// }
+	.icons {
+		width: $icons-avator;
+		height: $icons-avator;
+		position: absolute;
+		top: $icons-avator *.25; 
+		left: 0;
+		z-index: 3;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.cards-contents {
+		.tittle {
+			font-size: 160%;
+			font-weight: 700;
+		}
+
+		.sub-header {
+		}
 	}
 }

@@ -1,27 +1,28 @@
 <div class="container">
     <div class="form-page clearfix">
-        <div class="row pull-left">
-            <div class="col-sm-2">
-                <div class="form-group">
-                    <label for="segmentYear" class="control-label">Select Year</label>
-                    <select name="" class="form-control" id="segmentYear">
-                        <option value="2016-2017">2018-2019</option>
-                        <option value="2016-2017">2019-2020</option>
-                        <option selected="selected" value="2016-2017">2020-2021</option>
-                    </select>
-                </div>
-            </div>
+        <div class="row">
             <div class="col-sm-2">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Segment</label>
-                    <select name="" class="form-control" id="">
-                        <option value="">Equity</option>
-                        <option value="">Derivative</option>
-                        <option value="">Commodity</option>
-                        <option value="">Currency</option>
+                    <select name="" class="form-control control-inputs" id="">
+                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Derivative</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Commodity</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Currency</option>
                     </select>
                 </div>
             </div>
+            <div class="col-sm-2">
+                <div class="form-group disabled-equity">
+                    <label for="segmentYear" class="control-label">Select Year</label>
+                    <select name="" class="form-control " disabled id="segmentYear">
+                        <% for (var i =14; i <=21;  i++ ) { %>
+                        <option value="2016-2017">20<%= i %>-20<%= i+1 %></option>
+                        <% } %>
+                    </select>
+                </div>
+            </div>
+
             <div class="col-sm-5">
                 <div class="row">
                     <div class="col-sm-6">
@@ -77,10 +78,10 @@
             <ul class="btn-header-link">
                 <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
                             class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
-                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
-                            class="text">PDF</span></a></li>
-                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
-                                class="text">Email</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span class="text">PDF</span></a>
+                </li>
+                <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                            class="text">Email</span></a></li>
             </ul>
         </div>
         <div class="dt-table-responsive">

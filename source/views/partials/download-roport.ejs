@@ -1,34 +1,44 @@
 <div class="container">
     <div class="form-page clearfix">
-        <div class="row pull-left">
+        <div class="row">
             <div class="col-sm-2">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Statement</label>
-                    <select name="" class="form-control" id="segmentYear">
-                        <option value="2016-2017">Contract note</option>
-                        <option value="2016-2017">Annual global statement</option>
-                        <option value="2016-2017">Sauda bill</option>
+                    <select name="" class="form-control control-select-div" id="segmentYear">
+                        <option value="2016-2017" data-show="enable-equity" data-id="contract-note">Contract note
+                        </option>
+                        <!-- <option value="2016-2017" data-value="disabled-equity" data-disabled="false">Annual global statement</option> -->
+                        <option value="2016-2017" data-show="enable-equity" data-id="sauda-bill">Sauda bill</option>
                     </select>
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="form-group">
+                <div class="form-group enable-equity contract-note">
                     <label for="segmentYear" class="control-label">Segment</label>
-                    <select name="" class="form-control" id="">
-                        <option value="">Equity</option>
-                        <option value="">Derivative</option>
-                        <option value="">Commodity</option>
-                        <option value="">Currency</option>
+                    <select name="" class="form-control control-inputs" id="">
+                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity
+                        </option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Commodity</option>
+                    </select>
+                </div>
+                <div class="form-group enable-equity sauda-bill nodisplay">
+                    <label for="segmentYear" class="control-label">Segment</label>
+                    <select name="" class="form-control control-inputs" id="">
+                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="false">Equity
+                        </option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Derivative</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Commodity</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Currency</option>
                     </select>
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="form-group">
+                <div class="form-group disabled-equity">
                     <label for="segmentYear" class="control-label">financial year</label>
-                    <select name="" class="form-control" id="segmentYear">
-                        <option value="2016-2017">2019 -20</option>
-                        <option value="2016-2017">2020 -21</option>
-                        <option value="2016-2017">2021 -22</option>
+                    <select name="" class="form-control" disabled="disabled" id="segmentYear">
+                        <% for (var i =14; i <=21;  i++ ) { %>
+                        <option value="2016-2017">20<%= i %>-20<%= i+1 %></option>
+                        <% } %>
                     </select>
                 </div>
             </div>
@@ -55,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-sm-1">
                 <div class="form-group with-btn">
                     <button class="btn btn-theme hoverable waves-effect btn-block waves-light">Submit</button>
@@ -92,15 +102,15 @@
                     </div>
                     <ul class="btn-header-link">
                         <li class=""><a class=" btn-round" href="#" title="Send Email" data-toggle="tooltip"
-                            data-placement="top"><span class="fa fa-envelope-o icons"></span></a>
-                    </li>
-                        
+                                data-placement="top"><span class="fa fa-envelope-o icons"></span></a>
+                        </li>
+
                         <li class=""><a class=" btn-round" href="#" title="Excel" data-toggle="tooltip"
                                 data-placement="top"><span class="fa fa-file-excel icons"></span></a>
                         </li>
                         <li class=""><a class=" btn-round" href="#" title="PDF" data-toggle="tooltip"
-                            data-placement="top"><span class="fa fa-file-pdf icons"></span></a>
-                    </li>
+                                data-placement="top"><span class="fa fa-file-pdf icons"></span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -119,5 +129,4 @@
                 &nbsp; Send Email</button>
         </div>
     </div>
-</div>
 </div>

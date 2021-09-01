@@ -150,19 +150,18 @@
             <ul class="btn-header-link">
                 <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
                             class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
-                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
-                            class="text">PDF</span></a></li>
-                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
-                                class="text">Email</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span class="text">PDF</span></a>
+                </li>
+                <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                            class="text">Email</span></a></li>
             </ul>
         </div>
-        
+
         <div class="dt-table-responsive">
             <table id="holdingstable" class="table  table-symbols text-right" data-sortable="true" width="100%">
                 <thead>
                     <tr>
                         <th width="20%" class="with-icon">Symbol</th>
-                        <th class="with-icon text-right">QTY</th>
                         <th class="with-icon text-right">NRML&nbsp;QTY</th>
                         <th class="with-icon text-right">MTF&nbsp;QTY</th>
                         <th class="with-icon text-right">Total&nbsp;QTY</th>
@@ -170,8 +169,9 @@
                         <th class="with-icon text-right">Buy&nbsp;Value</th>
                         <th class="with-icon text-right">Prev&nbsp;Close</th>
                         <th class="with-icon text-right">Market&nbsp;Val</th>
-                        <th class="with-icon text-right">P&L</th>
-                        <th class="with-icon text-right">P&L&nbsp;Chg</th>
+                        <th class="with-icon text-right">Unrealised&nbsp;P&L</th>
+                        <th class="with-icon text-right">Day&nbsp;P&L</th>
+                        <th class="with-icon text-right">Day&nbsp;P&L&nbsp;Chg</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -185,12 +185,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>10000 <small class="text-lock">6500 <span
+                        <td>331.79</td>
+                        <td>331.79</td>
+                        <td>10000<small class="text-lock">6500 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>331.79</td>
-                        <td>331.79</td>
-                        <td>331.79</td>
                         <td>331.79</td>
                         <td>631.79</td>
                         <td>130</td>
@@ -202,33 +201,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+4.8%</span>
+                            <span class="text-success">303</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop0">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop0" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TIINDIA
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+4.8%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop0">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop0" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TIINDIA
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">10000</div>
+                                            <div class="price">331.79</div>
+                                            <div class="prv-close">130</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">303</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">10000</div>
-                                        <div class="price">331.79</div>
-                                        <div class="prv-close">130</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">303</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -245,12 +251,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>10003 <small class="text-lock">6600 <span
+                        <td>431.79</td>
+                        <td>431.79</td>
+                        <td>10003<small class="text-lock">6600 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>431.79</td>
-                        <td>431.79</td>
-                        <td>431.79</td>
                         <td>431.79</td>
                         <td>731.79</td>
                         <td>140</td>
@@ -262,33 +267,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+5.9%</span>
+                            <span class="text-danger">404</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop1">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop1" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+5.9%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop1">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop1" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">10003</div>
+                                            <div class="price">431.79</div>
+                                            <div class="prv-close">140</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">404</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">10003</div>
-                                        <div class="price">431.79</div>
-                                        <div class="prv-close">140</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">404</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -305,12 +317,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>10006 <small class="text-lock">6700 <span
+                        <td>531.79</td>
+                        <td>531.79</td>
+                        <td>10006<small class="text-lock">6700 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>531.79</td>
-                        <td>531.79</td>
-                        <td>531.79</td>
                         <td>531.79</td>
                         <td>831.79</td>
                         <td>150</td>
@@ -322,33 +333,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+6.10%</span>
+                            <span class="text-success">505</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop2">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop2" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+6.10%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop2">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop2" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">10006</div>
+                                            <div class="price">531.79</div>
+                                            <div class="prv-close">150</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">505</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">10006</div>
-                                        <div class="price">531.79</div>
-                                        <div class="prv-close">150</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">505</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -365,12 +383,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>10009 <small class="text-lock">6800 <span
+                        <td>631.79</td>
+                        <td>631.79</td>
+                        <td>10009<small class="text-lock">6800 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>631.79</td>
-                        <td>631.79</td>
-                        <td>631.79</td>
                         <td>631.79</td>
                         <td>931.79</td>
                         <td>160</td>
@@ -382,33 +399,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+7.11%</span>
+                            <span class="text-danger">606</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop3">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop3" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+7.11%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop3">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop3" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">10009</div>
+                                            <div class="price">631.79</div>
+                                            <div class="prv-close">160</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">606</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">10009</div>
-                                        <div class="price">631.79</div>
-                                        <div class="prv-close">160</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">606</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -425,12 +449,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100012 <small class="text-lock">6900 <span
+                        <td>731.79</td>
+                        <td>731.79</td>
+                        <td>100012<small class="text-lock">6900 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>731.79</td>
-                        <td>731.79</td>
-                        <td>731.79</td>
                         <td>731.79</td>
                         <td>1031.79</td>
                         <td>170</td>
@@ -442,33 +465,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+8.12%</span>
+                            <span class="text-success">707</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop4">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop4" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+8.12%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop4">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop4" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100012</div>
+                                            <div class="price">731.79</div>
+                                            <div class="prv-close">170</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">707</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100012</div>
-                                        <div class="price">731.79</div>
-                                        <div class="prv-close">170</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">707</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -485,12 +515,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100015 <small class="text-lock">7000 <span
+                        <td>831.79</td>
+                        <td>831.79</td>
+                        <td>100015<small class="text-lock">7000 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>831.79</td>
-                        <td>831.79</td>
-                        <td>831.79</td>
                         <td>831.79</td>
                         <td>1131.79</td>
                         <td>180</td>
@@ -502,33 +531,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+9.13%</span>
+                            <span class="text-danger">808</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop5">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop5" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+9.13%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop5">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop5" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100015</div>
+                                            <div class="price">831.79</div>
+                                            <div class="prv-close">180</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">808</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100015</div>
-                                        <div class="price">831.79</div>
-                                        <div class="prv-close">180</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">808</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -545,12 +581,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100018 <small class="text-lock">7100 <span
+                        <td>931.79</td>
+                        <td>931.79</td>
+                        <td>100018<small class="text-lock">7100 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>931.79</td>
-                        <td>931.79</td>
-                        <td>931.79</td>
                         <td>931.79</td>
                         <td>1231.79</td>
                         <td>190</td>
@@ -562,33 +597,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+10.14%</span>
+                            <span class="text-success">909</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop6">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop6" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TIINDIA
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+10.14%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop6">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop6" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TIINDIA
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100018</div>
+                                            <div class="price">931.79</div>
+                                            <div class="prv-close">190</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">909</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100018</div>
-                                        <div class="price">931.79</div>
-                                        <div class="prv-close">190</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">909</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -605,12 +647,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100021 <small class="text-lock">7200 <span
+                        <td>1031.79</td>
+                        <td>1031.79</td>
+                        <td>100021<small class="text-lock">7200 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1031.79</td>
-                        <td>1031.79</td>
-                        <td>1031.79</td>
                         <td>1031.79</td>
                         <td>1331.79</td>
                         <td>1100</td>
@@ -622,33 +663,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+11.15%</span>
+                            <span class="text-danger">10010</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop7">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop7" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+11.15%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop7">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop7" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100021</div>
+                                            <div class="price">1031.79</div>
+                                            <div class="prv-close">1100</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">10010</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100021</div>
-                                        <div class="price">1031.79</div>
-                                        <div class="prv-close">1100</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">10010</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -665,12 +713,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100024 <small class="text-lock">7300 <span
+                        <td>1131.79</td>
+                        <td>1131.79</td>
+                        <td>100024<small class="text-lock">7300 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1131.79</td>
-                        <td>1131.79</td>
-                        <td>1131.79</td>
                         <td>1131.79</td>
                         <td>1431.79</td>
                         <td>1110</td>
@@ -682,33 +729,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+12.16%</span>
+                            <span class="text-success">11011</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop8">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop8" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+12.16%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop8">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop8" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100024</div>
+                                            <div class="price">1131.79</div>
+                                            <div class="prv-close">1110</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">11011</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100024</div>
-                                        <div class="price">1131.79</div>
-                                        <div class="prv-close">1110</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">11011</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -725,12 +779,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100027 <small class="text-lock">7400 <span
+                        <td>1231.79</td>
+                        <td>1231.79</td>
+                        <td>100027<small class="text-lock">7400 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1231.79</td>
-                        <td>1231.79</td>
-                        <td>1231.79</td>
                         <td>1231.79</td>
                         <td>1531.79</td>
                         <td>1120</td>
@@ -742,33 +795,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+13.17%</span>
+                            <span class="text-danger">12012</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop9">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop9" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+13.17%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop9">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop9" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100027</div>
+                                            <div class="price">1231.79</div>
+                                            <div class="prv-close">1120</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">12012</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100027</div>
-                                        <div class="price">1231.79</div>
-                                        <div class="prv-close">1120</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">12012</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -785,12 +845,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100030 <small class="text-lock">7500 <span
+                        <td>1331.79</td>
+                        <td>1331.79</td>
+                        <td>100030<small class="text-lock">7500 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1331.79</td>
-                        <td>1331.79</td>
-                        <td>1331.79</td>
                         <td>1331.79</td>
                         <td>1631.79</td>
                         <td>1130</td>
@@ -802,33 +861,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+14.18%</span>
+                            <span class="text-success">13013</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop10">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop10" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+14.18%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop10">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop10" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100030</div>
+                                            <div class="price">1331.79</div>
+                                            <div class="prv-close">1130</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">13013</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100030</div>
-                                        <div class="price">1331.79</div>
-                                        <div class="prv-close">1130</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">13013</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -845,12 +911,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100033 <small class="text-lock">7600 <span
+                        <td>1431.79</td>
+                        <td>1431.79</td>
+                        <td>100033<small class="text-lock">7600 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1431.79</td>
-                        <td>1431.79</td>
-                        <td>1431.79</td>
                         <td>1431.79</td>
                         <td>1731.79</td>
                         <td>1140</td>
@@ -862,33 +927,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+15.19%</span>
+                            <span class="text-danger">14014</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop11">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop11" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+15.19%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop11">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop11" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100033</div>
+                                            <div class="price">1431.79</div>
+                                            <div class="prv-close">1140</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">14014</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100033</div>
-                                        <div class="price">1431.79</div>
-                                        <div class="prv-close">1140</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">14014</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -905,12 +977,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100036 <small class="text-lock">7700 <span
+                        <td>1531.79</td>
+                        <td>1531.79</td>
+                        <td>100036<small class="text-lock">7700 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1531.79</td>
-                        <td>1531.79</td>
-                        <td>1531.79</td>
                         <td>1531.79</td>
                         <td>1831.79</td>
                         <td>1150</td>
@@ -922,33 +993,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+16.20%</span>
+                            <span class="text-success">15015</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop12">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop12" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TIINDIA
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+16.20%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop12">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop12" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TIINDIA
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100036</div>
+                                            <div class="price">1531.79</div>
+                                            <div class="prv-close">1150</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">15015</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100036</div>
-                                        <div class="price">1531.79</div>
-                                        <div class="prv-close">1150</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">15015</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -965,12 +1043,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100039 <small class="text-lock">7800 <span
+                        <td>1631.79</td>
+                        <td>1631.79</td>
+                        <td>100039<small class="text-lock">7800 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1631.79</td>
-                        <td>1631.79</td>
-                        <td>1631.79</td>
                         <td>1631.79</td>
                         <td>1931.79</td>
                         <td>1160</td>
@@ -982,33 +1059,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+17.21%</span>
+                            <span class="text-danger">16016</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop13">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop13" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+17.21%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop13">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop13" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100039</div>
+                                            <div class="price">1631.79</div>
+                                            <div class="prv-close">1160</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">16016</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100039</div>
-                                        <div class="price">1631.79</div>
-                                        <div class="prv-close">1160</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">16016</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1025,12 +1109,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100042 <small class="text-lock">7900 <span
+                        <td>1731.79</td>
+                        <td>1731.79</td>
+                        <td>100042<small class="text-lock">7900 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1731.79</td>
-                        <td>1731.79</td>
-                        <td>1731.79</td>
                         <td>1731.79</td>
                         <td>2031.79</td>
                         <td>1170</td>
@@ -1042,33 +1125,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+18.22%</span>
+                            <span class="text-success">17017</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop14">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop14" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+18.22%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop14">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop14" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100042</div>
+                                            <div class="price">1731.79</div>
+                                            <div class="prv-close">1170</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">17017</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100042</div>
-                                        <div class="price">1731.79</div>
-                                        <div class="prv-close">1170</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">17017</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1085,12 +1175,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100045 <small class="text-lock">8000 <span
+                        <td>1831.79</td>
+                        <td>1831.79</td>
+                        <td>100045<small class="text-lock">8000 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1831.79</td>
-                        <td>1831.79</td>
-                        <td>1831.79</td>
                         <td>1831.79</td>
                         <td>2131.79</td>
                         <td>1180</td>
@@ -1102,33 +1191,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+19.23%</span>
+                            <span class="text-danger">18018</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop15">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop15" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+19.23%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop15">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop15" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100045</div>
+                                            <div class="price">1831.79</div>
+                                            <div class="prv-close">1180</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">18018</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100045</div>
-                                        <div class="price">1831.79</div>
-                                        <div class="prv-close">1180</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">18018</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1145,12 +1241,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100048 <small class="text-lock">8100 <span
+                        <td>1931.79</td>
+                        <td>1931.79</td>
+                        <td>100048<small class="text-lock">8100 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>1931.79</td>
-                        <td>1931.79</td>
-                        <td>1931.79</td>
                         <td>1931.79</td>
                         <td>2231.79</td>
                         <td>1190</td>
@@ -1162,33 +1257,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+20.24%</span>
+                            <span class="text-success">19019</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop16">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop16" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+20.24%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop16">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop16" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100048</div>
+                                            <div class="price">1931.79</div>
+                                            <div class="prv-close">1190</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">19019</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100048</div>
-                                        <div class="price">1931.79</div>
-                                        <div class="prv-close">1190</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">19019</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1205,12 +1307,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100051 <small class="text-lock">8200 <span
+                        <td>2031.79</td>
+                        <td>2031.79</td>
+                        <td>100051<small class="text-lock">8200 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2031.79</td>
-                        <td>2031.79</td>
-                        <td>2031.79</td>
                         <td>2031.79</td>
                         <td>2331.79</td>
                         <td>1200</td>
@@ -1222,33 +1323,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+21.25%</span>
+                            <span class="text-danger">20020</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop17">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop17" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+21.25%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop17">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop17" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100051</div>
+                                            <div class="price">2031.79</div>
+                                            <div class="prv-close">1200</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">20020</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100051</div>
-                                        <div class="price">2031.79</div>
-                                        <div class="prv-close">1200</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">20020</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1265,12 +1373,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100054 <small class="text-lock">8300 <span
+                        <td>2131.79</td>
+                        <td>2131.79</td>
+                        <td>100054<small class="text-lock">8300 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2131.79</td>
-                        <td>2131.79</td>
-                        <td>2131.79</td>
                         <td>2131.79</td>
                         <td>2431.79</td>
                         <td>1210</td>
@@ -1282,33 +1389,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+22.26%</span>
+                            <span class="text-success">21021</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop18">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop18" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TIINDIA
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+22.26%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop18">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop18" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TIINDIA
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100054</div>
+                                            <div class="price">2131.79</div>
+                                            <div class="prv-close">1210</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">21021</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100054</div>
-                                        <div class="price">2131.79</div>
-                                        <div class="prv-close">1210</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">21021</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1325,12 +1439,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100057 <small class="text-lock">8400 <span
+                        <td>2231.79</td>
+                        <td>2231.79</td>
+                        <td>100057<small class="text-lock">8400 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2231.79</td>
-                        <td>2231.79</td>
-                        <td>2231.79</td>
                         <td>2231.79</td>
                         <td>2531.79</td>
                         <td>1220</td>
@@ -1342,33 +1455,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+23.27%</span>
+                            <span class="text-danger">22022</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop19">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop19" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+23.27%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop19">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop19" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100057</div>
+                                            <div class="price">2231.79</div>
+                                            <div class="prv-close">1220</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">22022</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100057</div>
-                                        <div class="price">2231.79</div>
-                                        <div class="prv-close">1220</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">22022</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1385,12 +1505,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100060 <small class="text-lock">8500 <span
+                        <td>2331.79</td>
+                        <td>2331.79</td>
+                        <td>100060<small class="text-lock">8500 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2331.79</td>
-                        <td>2331.79</td>
-                        <td>2331.79</td>
                         <td>2331.79</td>
                         <td>2631.79</td>
                         <td>1230</td>
@@ -1402,33 +1521,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+24.28%</span>
+                            <span class="text-success">23023</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop20">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop20" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+24.28%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop20">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop20" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100060</div>
+                                            <div class="price">2331.79</div>
+                                            <div class="prv-close">1230</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">23023</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100060</div>
-                                        <div class="price">2331.79</div>
-                                        <div class="prv-close">1230</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">23023</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1445,12 +1571,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100063 <small class="text-lock">8600 <span
+                        <td>2431.79</td>
+                        <td>2431.79</td>
+                        <td>100063<small class="text-lock">8600 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2431.79</td>
-                        <td>2431.79</td>
-                        <td>2431.79</td>
                         <td>2431.79</td>
                         <td>2731.79</td>
                         <td>1240</td>
@@ -1462,33 +1587,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+25.29%</span>
+                            <span class="text-danger">24024</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop21">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop21" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+25.29%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop21">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop21" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100063</div>
+                                            <div class="price">2431.79</div>
+                                            <div class="prv-close">1240</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">24024</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100063</div>
-                                        <div class="price">2431.79</div>
-                                        <div class="prv-close">1240</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">24024</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1505,12 +1637,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100066 <small class="text-lock">8700 <span
+                        <td>2531.79</td>
+                        <td>2531.79</td>
+                        <td>100066<small class="text-lock">8700 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2531.79</td>
-                        <td>2531.79</td>
-                        <td>2531.79</td>
                         <td>2531.79</td>
                         <td>2831.79</td>
                         <td>1250</td>
@@ -1522,33 +1653,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+26.30%</span>
+                            <span class="text-success">25025</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop22">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop22" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+26.30%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop22">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop22" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100066</div>
+                                            <div class="price">2531.79</div>
+                                            <div class="prv-close">1250</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">25025</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100066</div>
-                                        <div class="price">2531.79</div>
-                                        <div class="prv-close">1250</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">25025</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1565,12 +1703,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100069 <small class="text-lock">8800 <span
+                        <td>2631.79</td>
+                        <td>2631.79</td>
+                        <td>100069<small class="text-lock">8800 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2631.79</td>
-                        <td>2631.79</td>
-                        <td>2631.79</td>
                         <td>2631.79</td>
                         <td>2931.79</td>
                         <td>1260</td>
@@ -1582,33 +1719,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+27.31%</span>
+                            <span class="text-danger">26026</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop23">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop23" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+27.31%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop23">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop23" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100069</div>
+                                            <div class="price">2631.79</div>
+                                            <div class="prv-close">1260</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">26026</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100069</div>
-                                        <div class="price">2631.79</div>
-                                        <div class="prv-close">1260</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">26026</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1625,12 +1769,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100072 <small class="text-lock">8900 <span
+                        <td>2731.79</td>
+                        <td>2731.79</td>
+                        <td>100072<small class="text-lock">8900 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2731.79</td>
-                        <td>2731.79</td>
-                        <td>2731.79</td>
                         <td>2731.79</td>
                         <td>3031.79</td>
                         <td>1270</td>
@@ -1642,33 +1785,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+28.32%</span>
+                            <span class="text-success">27027</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop24">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop24" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TIINDIA
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+28.32%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop24">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop24" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TIINDIA
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100072</div>
+                                            <div class="price">2731.79</div>
+                                            <div class="prv-close">1270</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">27027</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100072</div>
-                                        <div class="price">2731.79</div>
-                                        <div class="prv-close">1270</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">27027</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1685,12 +1835,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100075 <small class="text-lock">9000 <span
+                        <td>2831.79</td>
+                        <td>2831.79</td>
+                        <td>100075<small class="text-lock">9000 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2831.79</td>
-                        <td>2831.79</td>
-                        <td>2831.79</td>
                         <td>2831.79</td>
                         <td>3131.79</td>
                         <td>1280</td>
@@ -1702,33 +1851,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+29.33%</span>
+                            <span class="text-danger">28028</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop25">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop25" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+29.33%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop25">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop25" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100075</div>
+                                            <div class="price">2831.79</div>
+                                            <div class="prv-close">1280</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">28028</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100075</div>
-                                        <div class="price">2831.79</div>
-                                        <div class="prv-close">1280</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">28028</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1745,12 +1901,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100078 <small class="text-lock">9100 <span
+                        <td>2931.79</td>
+                        <td>2931.79</td>
+                        <td>100078<small class="text-lock">9100 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>2931.79</td>
-                        <td>2931.79</td>
-                        <td>2931.79</td>
                         <td>2931.79</td>
                         <td>3231.79</td>
                         <td>1290</td>
@@ -1762,33 +1917,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+30.34%</span>
+                            <span class="text-success">29029</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop26">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop26" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+30.34%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop26">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop26" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100078</div>
+                                            <div class="price">2931.79</div>
+                                            <div class="prv-close">1290</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">29029</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100078</div>
-                                        <div class="price">2931.79</div>
-                                        <div class="prv-close">1290</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">29029</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1805,12 +1967,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100081 <small class="text-lock">9200 <span
+                        <td>3031.79</td>
+                        <td>3031.79</td>
+                        <td>100081<small class="text-lock">9200 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>3031.79</td>
-                        <td>3031.79</td>
-                        <td>3031.79</td>
                         <td>3031.79</td>
                         <td>3331.79</td>
                         <td>1300</td>
@@ -1822,33 +1983,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+31.35%</span>
+                            <span class="text-danger">30030</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop27">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop27" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+31.35%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop27">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop27" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100081</div>
+                                            <div class="price">3031.79</div>
+                                            <div class="prv-close">1300</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">30030</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100081</div>
-                                        <div class="price">3031.79</div>
-                                        <div class="prv-close">1300</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">30030</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1865,12 +2033,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100084 <small class="text-lock">9300 <span
+                        <td>3131.79</td>
+                        <td>3131.79</td>
+                        <td>100084<small class="text-lock">9300 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>3131.79</td>
-                        <td>3131.79</td>
-                        <td>3131.79</td>
                         <td>3131.79</td>
                         <td>3431.79</td>
                         <td>1310</td>
@@ -1882,33 +2049,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-success">+32.36%</span>
+                            <span class="text-success">31031</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop28">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop28" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            TATAMOTORS
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-success">+32.36%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop28">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop28" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                TATAMOTORS
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100084</div>
+                                            <div class="price">3131.79</div>
+                                            <div class="prv-close">1310</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-success">31031</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100084</div>
-                                        <div class="price">3131.79</div>
-                                        <div class="prv-close">1310</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-success">31031</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -1925,12 +2099,11 @@
                                 </span>
                             </a>
                         </td>
-                        <td>100087 <small class="text-lock">9400 <span
+                        <td>3231.79</td>
+                        <td>3231.79</td>
+                        <td>100087<small class="text-lock">9400 <span
                                     class="fa fa-lock icons"></span></small>
                         </td>
-                        <td>3231.79</td>
-                        <td>3231.79</td>
-                        <td>3231.79</td>
                         <td>3231.79</td>
                         <td>3531.79</td>
                         <td>1320</td>
@@ -1942,33 +2115,40 @@
                         </td>
                         <td>
                             
-                            <span class="text-danger">+33.37%</span>
+                            <span class="text-danger">32032</span>
                             
-                            <div class="dropdown dropdown-table">
-                                <button class="button" id="dLabel" type="button" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <span class="fa fa-ellipsis-v icons-caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dLabel">
-                                    <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
-                                            data-target-content="#tradesPop29">View Trades</a></li>
-                                    <li><a href="#">Pledge for margin</a></li>
-                                    <li><a href="#">Cancel Pledge Request</a></li>
-                                </ul>
-                                <div id="tradesPop29" class="nodisplay">
-                                    <div class="preparation-contant">
-                                        <div class="symbol">
-                                            WIPRO
+                        </td>
+                        <td>
+                            <div class="dropdown-inner">
+                                
+                                <span class="text-danger">+33.37%</span>
+                                
+                                <div class="dropdown dropdown-table">
+                                    <button class="button" id="dLabel" type="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-ellipsis-v icons-caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="#" data-toggle="modal" data-target="#viewTradesPop"
+                                                data-target-content="#tradesPop29">View Trades</a></li>
+                                        <li><a href="#">Pledge for margin</a></li>
+                                        <li><a href="#">Cancel Pledge Request</a></li>
+                                    </ul>
+                                    <div id="tradesPop29" class="nodisplay">
+                                        <div class="preparation-contant">
+                                            <div class="symbol">
+                                                WIPRO
+                                                </div>
+                                            <div class="isin">ine121465641</div>
+                                            <div class="total-qty">100087</div>
+                                            <div class="price">3231.79</div>
+                                            <div class="prv-close">1320</div>
+                                            <div class="date">14 Jun 2021</div>
+                                            <div class="age-days">935</div>
+                                            <div class="profit-loss"> 
+                                                <span class="text-danger">32032</span>
+                                                
                                             </div>
-                                        <div class="isin">ine121465641</div>
-                                        <div class="total-qty">100087</div>
-                                        <div class="price">3231.79</div>
-                                        <div class="prv-close">1320</div>
-                                        <div class="date">14 Jun 2021</div>
-                                        <div class="age-days">935</div>
-                                        <div class="profit-loss"> 
-                                            <span class="text-danger">32032</span>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -2037,31 +2217,97 @@
     searching: true,
     info: false,
     bFilter: true,
-    bPaginate: false, 
+    bPaginate: false,
     destroy: true,
+    order: [],
     sPaginationType: 'bootstrap',
     responsive: true,
     processing: true,
     // serverSide:true,
     columnDefs: [{
-      //"targets":[0, 3], //first and last not sortable
-      // "orderable":false,
-    }, ],
+      targets: 'no-sort',
+      orderable: false,
+
+    }],
   });
 
   $('.search-input').on('keyup change input', function (e) {
     let search = $(this)
     let searchColumns = search.data('columns');
     e.preventDefault();
-    console.log(searchColumns);
+    // console.log(searchColumns);
     muynewtable.columns(searchColumns - 1).search(this.value).draw();
   });
 
   $(".export-excel").on("click", function (e) {
     e.preventDefault();
     var exportTable = $(this).data("table");
-    console.log(exportTable);
+    //  console.log(exportTable);
   });
+
+
+  $(".control-inputs").on("change click", function () {
+    let control = $(this);
+    var controlInput = 'false';
+
+    let searchColumns = control.find(':selected').data('columns');
+    let controlParents = control.parents('.form-page');
+    let controlData = control.find(':selected').attr('data-value');
+    // let controlData = control.find(':selected').attr('tabledin-taxt');
+    var controlInput = control.find(':selected').attr('data-disabled');
+    // console.log(controlParents.find('.' + controlData));
+    // console.log(controlParents.find('.' + controlData).find('input'));
+    controlParents.find('.' + controlData).removeClass('disabled').find('.form-control').removeClass('disabled')
+      .attr('disabled', false);
+
+    if (controlInput === 'true') {
+      controlParents.find('.' + controlData).addClass('disabled').find('.form-control').addClass('disabled').attr(
+        'disabled', true);
+    } else {
+      controlParents.find('.' + controlData).removeClass('disabled').find('.form-control').removeClass('disabled')
+        .attr('disabled', false);
+    }
+    if (searchColumns != undefined) {
+      $(muynewtable.columns(searchColumns - 1).header()).text(control.find(':selected').val());
+    }
+  });
+
+  $(".control-select-div").on("change click load", function () {
+    let control = $(this);
+    let controlParents = control.parents('.form-page');
+    let controlData = control.find(':selected').attr('data-show');
+    var controlInput = control.find(':selected').data('id');
+    var controlDiv = controlParents.find('.' + controlData).data('id');
+    // controlParents.find('.' + controlData).removeClass('nodisplay');
+    controlParents.find('.' + controlData).addClass('nodisplay').removeClass('display');
+    controlParents.find('.' + controlInput).removeClass('nodisplay').addClass('display');
+  });
+
+
+  //$('.switch-label').each(function () {
+  $('.download-wrapper-outer').each(function () {
+    let cardsWrapper = $(this);
+    var btnLink = cardsWrapper.find('.btn-header-link');
+    btnLink.on("click", 'li a', function () {
+      $('.download-wrapper-outer').removeClass('active');
+      var $thisLink = $(this);
+      // $('.download-wrapper-outer').removeClass('active');
+      var controlPerent = $thisLink.parents('ul');
+      controlPerent.find('li.active').removeClass('active');
+      $thisLink.parent().addClass('active');
+      cardsWrapper.addClass('active');
+      Swal.fire({
+        title: 'Success',
+        text: 'Email has been sent to registered email Id.',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 3000
+      });
+    });
+  });
+
+
+
 
   // $.extend(true, $.fn.dataTable.defaults, {
   //     sDom: "i",
@@ -2172,6 +2418,9 @@
     modal.find('.modal-dialog').css({
       paddingTop: (modal.height() / 4),
     });
+
+
+
   });
 </script>
    

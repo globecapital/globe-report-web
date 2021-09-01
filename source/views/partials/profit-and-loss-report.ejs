@@ -6,40 +6,49 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="segmentYear" class="control-label">Segment</label>
-                            <select name="" class="form-control" id="">
-                                <option value="">Equity</option>
-                                <option value="">Derivative</option>
-                                <option value="">Commodity</option>
-                                <option value="">Currency</option>
+                            <select name="" class="form-control control-select-div" id="">
+                                <option value="" data-show="show-equity" data-id="contract-equity">Equity</option>
+                                <option value="" data-show="show-equity" data-id="contract-derivative">Derivative</option>
+                                <option value="" data-show="show-equity" data-id="contract-derivative">Commodity</option>
+                                <option value="" data-show="show-equity" data-id="contract-derivative">Currency</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label for="segmentYear" class="control-label">P&L</label>
-                            <select name="" class="form-control" id="">
-                                <option value="">Realised P&amp;L</option>
-                                <option value="">UnRealised P&amp;L</option>
+                            <select name="" class="form-control control-inputs" id=""> 
+                                <option value="Realised P&amp;L" data-columns="8" data-value="disabled-inputs" data-disabled="false">Realised
+                                    P&amp;L</option>
+                                <option value="UnRealised P&amp;L" data-columns="8" data-value="disabled-inputs" data-disabled="true">UnRealised
+                                    P&amp;L</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="form-group">
+                        <div class="form-group disabled-inputs show-equity contract-equity">
+                            <label for="segmentYear" class="control-label">financial year</label>
+                            <select name="" class="form-control" id="segmentYear" disabled>
+                                <% for (var i =14; i <=21;  i++ ) { %>
+                                <option value="2016-2017">20<%= i %>-20<%= i+1 %></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="form-group disabled-inputs show-equity contract-derivative nodisplay">
                             <label for="segmentYear" class="control-label">financial year</label>
                             <select name="" class="form-control" id="segmentYear">
-                                <option value="2016-2017">2019 -20</option>
-                                <option value="2016-2017">2020 -21</option>
-                                <option value="2016-2017">2021 -22</option>
+                                <% for (var i =14; i <=21;  i++ ) { %>
+                                <option value="2016-2017">20<%= i %>-20<%= i+1 %></option>
+                                <% } %>
                             </select>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="col-sm-4">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="form-group">
+                        <div class="form-group disabled-inputs">
                             <label for="toDate" class="control-label">From Date</label>
                             <div class="input-icon input-icon-right">
                                 <i class="fa fa-calendar icons"></i>
@@ -48,7 +57,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="form-group">
+                        <div class="form-group disabled-inputs">
                             <label for="toDate" class="control-label">TO Date</label>
                             <div class="input-icon input-icon-right">
                                 <i class="fa fa-calendar icons"></i>
@@ -91,10 +100,10 @@
             <ul class="btn-header-link">
                 <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
                             class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
-                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
-                            class="text">PDF</span></a></li>
-                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
-                                class="text">Email</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span class="text">PDF</span></a>
+                </li>
+                <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                            class="text">Email</span></a></li>
             </ul>
         </div>
         <div class="dt-table-responsive">
@@ -108,7 +117,7 @@
                         <th class="with-icon text-right">Sell Avg </th>
                         <th class="with-icon text-right">Sell Value </th>
                         <th class="with-icon text-right">Prev Close </th>
-                        <th class="with-icon text-right">Unrealised P&L </th>
+                        <th class="with-icon text-right tabledin-taxt">Realised P&L </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -133,9 +142,9 @@
                         <td>NA</td>
                         <td><%= j+1*4 %>0.<%= j+1*4 %></td>
                         <td> <% if (j % 2 ) { %>
-                            <span class="text-danger">+<%= j+1*4 %>.<%= j+1*8 %>%</span>
+                            <span class="text-danger"><%= j+1*4 %>0<%= j+1*8 %></span>
                             <%} else { %>
-                            <span class="text-success">+<%= j+1*4 %>.<%= j+1*8 %>%</span>
+                            <span class="text-success"><%= j+1*4 %>0<%= j+1*8 %></span>
                             <% } %>
                         </td>
                     </tr>

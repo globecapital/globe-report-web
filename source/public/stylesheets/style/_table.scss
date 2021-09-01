@@ -40,12 +40,10 @@
 					background-color: $table-bg-hover;
 				}
 				.dropdown-table {
-					float: right;
 					border: 0;
 					padding: 0;
-					margin-left: $padding-base-horizontal;
 					.dropdown-menu {
-						right: $padding-base-vertical * 3;
+						right: $padding-base-vertical * 2;
 						left: auto;
 						top: -$padding-base-vertical * 2;
 					}
@@ -59,6 +57,19 @@
 						.button {
 							color: $brand-primary;
 						}
+					}
+				}
+				.dropdown-inner {
+					position: relative;
+					padding-right: $padding-base-horizontal;
+					.dropdown-table {
+						position: absolute;
+						right: (-$padding-base-horizontal)+2;
+						top: 0;
+						bottom: 0;
+						text-align: center;
+						width: $padding-base-vertical * 3;
+						z-index: $zindex-navbar/4;
 					}
 				}
 			}

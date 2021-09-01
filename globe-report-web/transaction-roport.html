@@ -126,28 +126,43 @@
         </div>
         <div class="container">
     <div class="form-page clearfix">
-        <div class="row pull-left">
-            <div class="col-sm-2">
-                <div class="form-group">
-                    <label for="segmentYear" class="control-label">Select Year</label>
-                    <select name="" class="form-control" id="segmentYear">
-                        <option value="2016-2017">2018-2019</option>
-                        <option value="2016-2017">2019-2020</option>
-                        <option selected="selected" value="2016-2017">2020-2021</option>
-                    </select>
-                </div>
-            </div>
+        <div class="row">
             <div class="col-sm-2">
                 <div class="form-group">
                     <label for="segmentYear" class="control-label">Segment</label>
-                    <select name="" class="form-control" id="">
-                        <option value="">Equity</option>
-                        <option value="">Derivative</option>
-                        <option value="">Commodity</option>
-                        <option value="">Currency</option>
+                    <select name="" class="form-control control-inputs" id="">
+                        <option value="" selected="selected" data-value="disabled-equity" data-disabled="true">Equity</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Derivative</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Commodity</option>
+                        <option value="" data-value="disabled-equity" data-disabled="false">Currency</option>
                     </select>
                 </div>
             </div>
+            <div class="col-sm-2">
+                <div class="form-group disabled-equity">
+                    <label for="segmentYear" class="control-label">Select Year</label>
+                    <select name="" class="form-control " disabled id="segmentYear">
+                        
+                        <option value="2016-2017">2014-2015</option>
+                        
+                        <option value="2016-2017">2015-2016</option>
+                        
+                        <option value="2016-2017">2016-2017</option>
+                        
+                        <option value="2016-2017">2017-2018</option>
+                        
+                        <option value="2016-2017">2018-2019</option>
+                        
+                        <option value="2016-2017">2019-2020</option>
+                        
+                        <option value="2016-2017">2020-2021</option>
+                        
+                        <option value="2016-2017">2021-2022</option>
+                        
+                    </select>
+                </div>
+            </div>
+
             <div class="col-sm-5">
                 <div class="row">
                     <div class="col-sm-6">
@@ -203,10 +218,10 @@
             <ul class="btn-header-link">
                 <li class=""><a href="#" class="export-excel" data-table="#table-n01" data-ignorecolumn="3,4"><span
                             class="fa fa-file-excel-o icons"></span> <span class="text">Excel</span></a></li>
-                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span
-                            class="text">PDF</span></a></li>
-                            <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
-                                class="text">Email</span></a></li>
+                <li class=""><a href="#"><span class="fa fa-file-pdf-o icons"></span> <span class="text">PDF</span></a>
+                </li>
+                <li class=""><a href="#"><span class="fa fa-envelope-o icons"></span> <span
+                            class="text">Email</span></a></li>
             </ul>
         </div>
         <div class="dt-table-responsive">
@@ -566,31 +581,97 @@
     searching: true,
     info: false,
     bFilter: true,
-    bPaginate: false, 
+    bPaginate: false,
     destroy: true,
+    order: [],
     sPaginationType: 'bootstrap',
     responsive: true,
     processing: true,
     // serverSide:true,
     columnDefs: [{
-      //"targets":[0, 3], //first and last not sortable
-      // "orderable":false,
-    }, ],
+      targets: 'no-sort',
+      orderable: false,
+
+    }],
   });
 
   $('.search-input').on('keyup change input', function (e) {
     let search = $(this)
     let searchColumns = search.data('columns');
     e.preventDefault();
-    console.log(searchColumns);
+    // console.log(searchColumns);
     muynewtable.columns(searchColumns - 1).search(this.value).draw();
   });
 
   $(".export-excel").on("click", function (e) {
     e.preventDefault();
     var exportTable = $(this).data("table");
-    console.log(exportTable);
+    //  console.log(exportTable);
   });
+
+
+  $(".control-inputs").on("change click", function () {
+    let control = $(this);
+    var controlInput = 'false';
+
+    let searchColumns = control.find(':selected').data('columns');
+    let controlParents = control.parents('.form-page');
+    let controlData = control.find(':selected').attr('data-value');
+    // let controlData = control.find(':selected').attr('tabledin-taxt');
+    var controlInput = control.find(':selected').attr('data-disabled');
+    // console.log(controlParents.find('.' + controlData));
+    // console.log(controlParents.find('.' + controlData).find('input'));
+    controlParents.find('.' + controlData).removeClass('disabled').find('.form-control').removeClass('disabled')
+      .attr('disabled', false);
+
+    if (controlInput === 'true') {
+      controlParents.find('.' + controlData).addClass('disabled').find('.form-control').addClass('disabled').attr(
+        'disabled', true);
+    } else {
+      controlParents.find('.' + controlData).removeClass('disabled').find('.form-control').removeClass('disabled')
+        .attr('disabled', false);
+    }
+    if (searchColumns != undefined) {
+      $(muynewtable.columns(searchColumns - 1).header()).text(control.find(':selected').val());
+    }
+  });
+
+  $(".control-select-div").on("change click load", function () {
+    let control = $(this);
+    let controlParents = control.parents('.form-page');
+    let controlData = control.find(':selected').attr('data-show');
+    var controlInput = control.find(':selected').data('id');
+    var controlDiv = controlParents.find('.' + controlData).data('id');
+    // controlParents.find('.' + controlData).removeClass('nodisplay');
+    controlParents.find('.' + controlData).addClass('nodisplay').removeClass('display');
+    controlParents.find('.' + controlInput).removeClass('nodisplay').addClass('display');
+  });
+
+
+  //$('.switch-label').each(function () {
+  $('.download-wrapper-outer').each(function () {
+    let cardsWrapper = $(this);
+    var btnLink = cardsWrapper.find('.btn-header-link');
+    btnLink.on("click", 'li a', function () {
+      $('.download-wrapper-outer').removeClass('active');
+      var $thisLink = $(this);
+      // $('.download-wrapper-outer').removeClass('active');
+      var controlPerent = $thisLink.parents('ul');
+      controlPerent.find('li.active').removeClass('active');
+      $thisLink.parent().addClass('active');
+      cardsWrapper.addClass('active');
+      Swal.fire({
+        title: 'Success',
+        text: 'Email has been sent to registered email Id.',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 3000
+      });
+    });
+  });
+
+
+
 
   // $.extend(true, $.fn.dataTable.defaults, {
   //     sDom: "i",
@@ -701,6 +782,9 @@
     modal.find('.modal-dialog').css({
       paddingTop: (modal.height() / 4),
     });
+
+
+
   });
 </script>
 </body>
